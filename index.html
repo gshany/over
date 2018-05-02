@@ -1,0 +1,232 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="姜山的自留地 姜山的前端代码 ">
+    <meta name="keywords" content="jsmeta jiangshan 姜山 前端 javascript html css js ">
+    <meta name="author" content="姜山 jsmeta ">
+    <meta name="robots" content="all">
+    <base target="_blank">
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
+    <link rel="manifest" href="manifest.json">
+    <title>jsmeta前端作品</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", Heiti, "黑体", sans-serif;
+        }
+        h2,a{
+            font-size:22px;
+            line-height:2.7;       
+        }
+        .according-title,.according-list a{
+            -webkit-transition:all 0.7s ease;
+            -moz-transition:all 0.7s ease;
+            -ms-transition:all 0.7s ease;
+            -o-transition:all 0.7s ease;
+            transition:all 0.7s ease;
+        }
+
+        .main{
+            width:540px;
+            box-sizing:border-box;
+            padding:80px;
+            margin:20px auto;
+            border-radius:5px;
+            border:1px solid #ccc;
+            box-shadow:0 0 4px #ccc;
+        }
+        @media screen and (max-width:540px){
+            .main{
+                width:90%;
+                padding:40px;
+            }
+            h2,a{
+                font-size:14px;
+            }
+        }
+        .according-wrap{
+            border-bottom:1px solid #ccc;
+        }
+        .according-title,.according-list a{
+            display:block;
+            color:#0a8cd2;
+            text-indent:20px;
+            border-radius:5px;
+            cursor:pointer;
+            text-decoration:none;
+        }
+        .according-title:hover,.according-list a:hover{
+            color:#fff;
+            background:#56ad56;
+            text-indent:40px;
+        }
+        .according-title.closed+.according-list{
+            /*
+            问题的根本原因是transform之后其他的元素认为该元素还在原来的状态。
+            原来的方案改变了position，能解决问题但是不是很好。后来决定用height：0；正常情况下height：auto，不会形成height过度，何况我把时间设为0s
+            */
+            -webkit-transform:scale(1,0);
+            -moz-transform:scale(1,0);
+            -ms-transform:scale(1,0);
+            -o-transform:scale(1,0);
+            transform:scale(1,0);
+            -webkit-transition-duration:0s;
+            -moz-transition-duration:0s;
+            -ms-transition-duration:0s;
+            -o-transition-duration:0s;
+            transition-duration:0s;
+            height:0;
+        }
+        .according-list{
+            padding-left:30px;
+            -webkit-transform-origin:top center;
+            -moz-transform-origin:top center;
+            -o-transform-origin:top center;
+            -ms-transform-origin:top center;
+            transform-origin:top left;
+            -webkit-transition:transform 0.6s cubic-bezier(0.25,0.1,0.3,1.5);
+            -moz-transition:transform 0.6s cubic-bezier(0.25,0.1,0.3,1.5);
+            -ms-transition:transform 0.6s cubic-bezier(0.25,0.1,0.3,1.5);
+            -o-transition:transform 0.6s cubic-bezier(0.25,0.1,0.3,1.5);
+            transition:transform 0.6s cubic-bezier(0.25,0.1,0.3,1.5);
+        }
+
+    </style>
+</head>
+<body>
+    <main class='main' id="main">
+        <section class='according-wrap'>
+            <h2 class='according-title closed'>第一章 &nbsp;&nbsp;图片轮播效果</h2>
+            <div class='according-list'>
+                <a href='./xxk.html' >网易天谕图片轮播</a>
+                <a href='carousel/lunbo1/lunbo1.html' >水平滑动轮播</a>
+                <a href='carousel/lunbo2/lunbo2.html' >平滑滚动轮播</a>
+                <a href='carousel/lunbo3/lunbo3.html' >淡入淡出轮播</a>
+                <a href='carousel/lunbo4/lunbo4.html' >整个翻页轮播</a>
+                <a href='carousel/lunbo5/lunbo5.html' >旋转木马</a>
+            </div>
+        </section>
+        <section class='according-wrap'>
+        <h2 class='according-title closed'>第二章 &nbsp;&nbsp;canvas绘图</h2>
+        <div class='according-list closed'>
+        <a href='canvas/curveTo/bezierCurveTo.html'>贝塞尔曲线绘制演示</a>
+        <a href='canvas/curveTo/quadraticCurveTo.html' >二次曲线绘制演示</a>
+        <a href='canvas/brickBreaker/index.html' >桌上弹球</a>
+        <a href='canvas/canvasWatch/index.html' >canvas时钟</a>
+        <a href='canvas/whiteBrick/index.html' >别踩白块</a>
+        </div>
+        </section>
+        <section class='according-wrap'>
+            <h2 class='according-title closed'>第三章 &nbsp;&nbsp;图片文字展示效果</h2>
+            <div class='according-list'>
+                <a href='graph/fangda/index.html'  >点击放大缩小</a>
+                <a href='graph/fadeOut/index.html'  >鼠标悬浮淡出效果</a>
+                <a href='graph/magnifier/index.html'  >放大镜特效</a>
+                <a href='graph/photowall/index.html'  >图片墙</a>
+                <a href='graph/slidedoor/index.html'  >滑动门</a>
+                <a href='graph/jumbotron/index.html'  >巨幕广告</a>
+            </div>
+        </section>
+        <section class='according-wrap'>
+            <h2 class='according-title closed'>第四章 &nbsp;&nbsp;表单相关</h2>
+            <div class='according-list'>
+                <a href='form/tabForward.html'  >自动切换焦点</a>
+                <a href='form/preventAutoCheck.html'  >阻止某个表单控件验证</a>
+                <a href='form/setCustomeValidate.html'  >自定义错误信息</a>
+                <a href='form/multilinkage.html'  >多级联动</a>
+                <a href='form/日期多级联动.html'  >日期多级联动</a>
+                <a href='form/reg.html'  >正则在线测试工具</a>
+            </div>
+        </section>
+        <section class='according-wrap'>
+            <h2 class='according-title closed'>第五章 &nbsp;&nbsp;模仿的网站</h2>
+            <div class='according-list'>
+                <a href='model/imooc/index.html'  >慕课网主页</a>
+                <a href='model/yili/index.html'  >伊利主页</a>
+            </div>
+        </section>
+        <section class='according-wrap'>
+            <h2 class='according-title closed'>第六章 &nbsp;&nbsp;第三方</h2>
+            <div class='according-list'>
+                <a href='thirdparty/vue-admin/index.html'  >基于Vue的通用管理系统</a>
+                <a href='thirdparty/vue/v_box.html'  >vue CSS Box</a>
+                <a href='thirdparty/jquery/fullpage/fullpage.html'  >myfullpage</a>
+            </div>
+        </section>
+        <section class='according-wrap'>
+            <h2 class='according-title closed'>第七章 &nbsp;&nbsp;移动端</h2>
+            <div class='according-list'>
+                <a href='mobile/cateList/cateList.html'>纯CSS分类列表</a>
+                <a href='mobile/horizontalMove/index.html'>乐车邦保养手册</a>
+                <a href='mobile/h5page/invitation.html'  >单身交友派对邀请函</a>
+                <a href='mobile/h5page/imoocannulreport.html'>慕课网年度报告</a>
+                <a href='mobile/lottery/index.html'  >抽奖</a>
+            </div>
+        </section>       
+        <section class='according-wrap'>
+            <h2 class='according-title closed'>第八章 &nbsp;&nbsp;奇技淫巧</h2>
+            <div class='according-list'>
+                <a href='tricks/cssclock/index.html'>CSS时钟</a>
+                <a href='tricks/lace/index.html'>渐变绘制花边</a>
+                <a href='tricks/playicon/index.html'>一个div实现播放按钮</a>
+                <a href='tricks/animation_spin/index.html'  >动画——不转不是中国人</a>
+            </div>
+        </section>  
+        <section class='according-wrap'>
+            <h2 class='according-title '>第九章 &nbsp;&nbsp;电子书&博客</h2>
+            <div class='according-list'>
+                <a href='https://jiangshanmeta.gitbooks.io/javascript-polyfill/content/'>javascript中的polyfill</a>
+                <a href='https://jiangshanmeta.gitbooks.io/vue_source_analysis/content/'>Vue源码解读</a>
+                <a href='https://jiangshanmeta.gitbooks.io/codeigniter_source_analysis/content/'>CI源码解读</a>
+                <a href='https://jiangshanmeta.gitbooks.io/datastructure_php/content/'  >数据结构(PHP描述)</a>
+
+                <a href='https://jiangshanmeta.gitbooks.io/underscore_source_analysis/content/'  >underscore源码解读</a>
+                <a href='https://github.com/jiangshanmeta/jiangshanmeta.github.io'  >博客</a>
+            </div>
+        </section>
+
+
+
+    </main>
+    <script>
+        function according(id){
+            var main = document.querySelector("#"+id);
+            var according_title = main.querySelectorAll(".according-title");
+            var len = according_title.length;
+
+            for(var i=len;i--;){
+                according_title[i].index = i;
+                according_title[i].onclick = function(){
+                    for(var j=len;j--;){
+                        if(j==this.index){
+                            according_title[j].classList.toggle("closed");
+                        }else{
+                            according_title[j].classList.add("closed");
+                        }
+                    }
+                }
+            }
+
+        }
+
+        according("main");
+    </script>
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('service-worker.js').then(function(){
+                console.log("注册成功")
+            }).catch(function(){
+                console.log("注册失败")
+            })
+        }
+    </script>
+
+
+</body>
+</html>
