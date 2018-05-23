@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>实时时间</title>
+  <style>
+  body{
+	background:#000;
+  }
+  #content{
+    margin: 100px auto;
+    width: 300px;
+    height: 30px;
+  }
+    input{
+      width:300px;
+      height:30px;
+      background:#000;
+      color:#00ff00;
+      text-align:center;
+      letter-spacing:2px;
+      font-size:30px;
+      border-radius:12px
+    }
+  </style>
+</head>
+<script type="text/javascript">
+  var attime;
+  var colorHead,colorFoot;
+
+  function clock(){
+    var time=new Date();
+    
+    var hours = time.getHours();
+    if(hours<10){hours="0"+hours};  //时间前面加个 0;以此类推
+   
+    var minutes = time.getMinutes();
+    if(minutes<10){minutes="0"+minutes};
+   
+    var seconds = time.getSeconds();
+    if(seconds<10){seconds="0"+seconds};
+   
+    var week = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"]
+    var day = time.getDay();
+
+    attime= hours+":"+minutes+":"+seconds+" "+week[day];
+    document.getElementById("clock").value = attime;
+  }
+
+  var timer = setInterval(clock,1000);
+
+</script>
+
+<body>
+<form>
+<div id='content'>
+    <input type="text" id="clock" size="50" >
+</div>
+
+</form>
+</body>
+</html>
