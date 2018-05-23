@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜谱</title>
+ 
+	<style>
+		body,h1,h2,h3,h4,h5,h6,p,ul,ol,form{
+			margin: 0;padding: 0;
+		}
+		body{
+			background:url(caipubj.jpg);
+			background-attachment:fixed;
+		}
+		.all {
+				margin-top: 30px;
+				
+			}
+		/*h2{padding-top:50px}*/
+		#div1{
+			width: 680px;
+			height:40px;
+			margin:50px auto 50px;
+			font-size:0 
+			
+		}
+		#btnSearch{
+			width: 80px;
+			height: 40px;
+			background: #fa7e3e;
+			border-style:none;
+			color: #fff;
+			font-size:20px;
+			cursor:pointer;
+			vertical-align:bottom;
+		
+		}
+		#txtSearch{
+			width: 280px;
+			height: 34px;
+
+			vertical-align:bottom;
+
+			text-indent: 2em;
+		}
+		#menu {
+				width: 800px;
+				height:1080px;
+				background:#fff;
+				margin:0 auto;
+				padding:0 50px;
+
+			}
+
+
+/*		.icon-search:before {
+    			content: '\e813';
+			}
+	[class*=" icon-"]:before, [class^=icon-]:before {
+    font-family: fontello;
+    font-style: normal;
+    font-weight: 400;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+}*/
+
+.icon-font {
+    font-size: 22px;
+}
+
+em, i {
+    font-style: normal;
+}
+	</style>
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.js"></script>
+    <script>
+		$(function(){
+			$('#btnSearch').click(function(){
+			    var menu = $('#menu')
+			    menu = menu.text('正在查询结果...')
+				var txt = $('#txtSearch').val()
+				txt1 = encodeURIComponent(txt)
+				
+				$.ajax({
+					type:'get',
+					dataType:'jsonp',
+					url:'http://apis.juhe.cn/cook/query?key=60b9689582560d24c19ff20a47a3c8fa&pn=3&rn=10&menu=' +txt1,
+					success:function(data){
+					     menu.text('')
+						if(data.resultcode!=200){
+							menu.text('没有相关信息')
+							return;
+						}
+						
+						for(var i=0;i<data.result.data.length;i++){
+							var mydata = data.result.data[i]
+							var div1 = $('<div class="all"></div>')
+							menu.append(div1)
+							
+							var title = $('<h2>'+mydata.title+'</h2>')
+							div1.append(title)
+							
+							var tags = $('<p>'+mydata.tags+'</p>')
+							div1.append(tags)
+							
+							var imtro = $('<p>'+mydata.imtro+'</p>')
+							div1.append(imtro)
+							
+							var ingredients = $('<p>'+mydata.ingredients+'</p>')
+							div1.append(ingredients)
+							
+							var burden = $('<p>'+mydata.burden+'</p>')
+							div1.append(burden)
+							
+							for(var j=0;j<mydata.albums.length;j++){
+								var img = $(" <img src=' "+mydata.albums[j]+" '> ")
+								div1.append(img)
+							}
+						
+							var steps = $('<div></div>')
+							div1.append(steps)
+						    
+							for(var k=0;k<mydata.steps.length;k++){
+								var step = mydata.steps[k]
+								
+								var c = $('<div></div>')
+								steps.append(c)
+								
+								var p2=$('<p>' +step.step+ '</p>')
+								c.append(p2)
+								
+								var p1=$('<p><img src = " '+ step.img +' "></p>')
+								c.append(p1)
+								
+								
+							}
+						     
+						menu.append('<hr>')
+						}	
+
+						
+					},
+					error:function(e){
+					    menu.text('出错')
+					}
+				
+				})
+			})
+		})
+	</script>
+   
+
+   
+
+
+   
+   </head>
+<body>
+	<div id='div1'>
+	    <i class="icon-font icon-search"></i>
+		<input type="text"  id="txtSearch"  placeholder='请输入查询的菜名' > 
+		<input type="button" value="搜索" id="btnSearch">
+	</div>
+	<div id="menu"></div>
+</body>
+</html>
+
+<!-- http://apis.juhe.cn/mobile/get?phone=13429667914&key=ed779e70f39e7b6d14d632c52e13ebb3&dtype=jsonp&callback=handle -->
+
+<!-- http://apis.juhe.cn/mobile/get?key=ed779e70f39e7b6d14d632c52e13ebb3&dtype=jsonp&callback=handle&phone=13429667914 -->
