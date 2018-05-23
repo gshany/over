@@ -11,9 +11,6 @@
 
 
 
-
-
-
 .index-banner-bg img{
 	margin:0 auto;
 	
@@ -23,23 +20,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 这里没搞懂：居中的方法就是总宽度/2 */
 .index-banner .index-banner-text {
 	position:absolute;
 	left:50%;
@@ -50,10 +30,9 @@
 .index-banner-text .text-logo {
 	width:776px;
 	height:117px;
-	background:url(../images/index-banner-textlogo.png);
+	background:url(index-banner-textlogo.png);
 	
 }
-
 
 
 .index-banner-text .text-info {
@@ -63,9 +42,6 @@
 	
 	
 }
-
-
-
 
 
 .index-banner-text  .text-info .line {
@@ -89,7 +65,7 @@
 	border-top:4px solid #f34949;
 }
 
-/* 这里没搞懂：居中的方法就是总宽度/2 */
+
 .index-menu .menu-tips {
 	position:absolute;
 	left:50%;
@@ -103,7 +79,7 @@
 	background:#f34949;
 }
 
-/* 这里没搞懂：设置尖角 */
+
 .index-menu .menu-tips:after {
 	position:absolute;
 	content:' ';
@@ -116,7 +92,7 @@
 	border-bottom:10px solid #fff;
 }
 
-/* overflow：hidden觉得的干货 */
+/* overflow：hidden干货 */
 .index-menu .menu-list {
 	margin-top:150px;
 	color:#555;
@@ -179,7 +155,7 @@
 	width:11px;
 	height:7px;
 	margin-left:12px;
-	background:url(../images/menu-more-icon.jpg)
+	background:url(menu-more-icon.jpg)
 }
 
 .index-panel {
@@ -241,10 +217,6 @@
 
 
 
-
-
-
-
 .index-food-list .food-item {
 	float:left;
 	width:230px;
@@ -296,7 +268,7 @@
 	width:12px;
 	height:12px;
 	margin-right:5px;
-	background-image:url(../images/index-star.png);
+	background-image:url(index-star.png);
 	background-repeat:no-repeat;
 	
 }
