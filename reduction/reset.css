@@ -1,0 +1,37 @@
+	* {padding:0px;margin:0px;
+	
+		font-family:"Times New Roman",Georgia,Serif,Aria;
+	}
+	
+	
+	ol, ul ,li {                   /* 一定注意逗号隔开 */
+		list-style:none;
+	}
+	
+	a {
+		text-decoration:none;
+		display:block;
+		color:white;
+		
+	}
+	
+	img {
+		border:none;
+		display:block;
+	}
+	
+	.clearfloat {
+		zoom:1;      /*ie*/
+	}
+	
+	
+	/* 这个的目的 尾部放一个块级元素,让其左右清除浮动,盒子内部就会撑开; */
+	/* 另外的方法也可以加一个空div,吉延鹏有做过一次，当时不是很懂，现在懂了 */
+	
+	.clearfloat:after{
+		clear:both;
+		display:block;
+		content:'';
+		visibility:hidden;
+		height:0;
+	}

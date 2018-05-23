@@ -1,0 +1,147 @@
+
+.public-header {
+	height:110px;
+}
+
+.public-header .header-logo {
+	float:left;
+	margin-top:40px;
+	width:182px;
+	background:url(../images/index-header-logo.png) no-repeat;
+	
+}
+
+.public-header .header-logo a{
+	height:54px;
+}
+
+
+
+/* 导航栏 */
+.public-header .header-nav{
+	float:right;
+	font-size:16px;
+}
+
+.public-header .header-nav a:hover{
+	/* text-decoration:underline; */
+	color:orange;
+}
+
+.public-header .header-nav .item{
+	float:left;
+	margin-top:44px;
+	margin-left:50px;
+	
+}
+
+.public-header .header-nav a {
+	color:#3b3b3b;
+}
+
+.header-nav .item-icon{position:relative;z-index:2}
+
+.header-nav .item-icon {
+	background:url(../images/icon/arrow.jpg) right center no-repeat;
+	padding-right:15px;
+	position:relative;
+}
+
+.nav-item a{line-height:30px;padding:0 10px;}
+
+.nav-item{
+	position:absolute;
+	top:0;
+	left:0;
+	margin-top:20px;
+	display:none;
+	padding:10px 0;
+}
+
+.nav-item li{width:150px;background-color:#fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.public-container {
+	position:relative;
+	margin:0 auto ;
+	width:1100px;
+}
+
+.public-footer {
+	height:218px;
+	padding-top:100px;
+	margin-top:100px;
+	background:#3b3b3b;
+}
+
+
+.public-footer .footer-col {
+	width:230px;
+	float:left;
+	margin-right:60px;
+	font-size:16px;
+	color:#fff;
+	line-height:1.8;
+}
+
+
+
+.public-footer .footer-col a:hover{text-decoration:underline;
+	color:orange;}
+
+
+
+
+.public-footer  .last {
+	margin-right:0;
+}
+
+.public-footer .footer-logo {
+	width:182px;
+	height:56px;
+	margin-top:-15px;
+	margin-bottom:10px;
+	background:url(../images/index-footer-logo.png) no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,737 @@
+
+.index-banner {
+	position:relative;
+	background:#17130b;
+}
+
+.index-banner-bg {
+	height:570px;
+	overflow:hidden;
+}
+
+
+
+
+
+
+.index-banner-bg img{
+	margin:0 auto;
+	
+	width:1500px;
+	height:570px;
+	/* float:left; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 这里没搞懂：居中的方法就是总宽度/2 */
+.index-banner .index-banner-text {
+	position:absolute;
+	left:50%;
+	top:200px;
+	margin-left:-388px;
+}
+
+.index-banner-text .text-logo {
+	width:776px;
+	height:117px;
+	background:url(../images/index-banner-textlogo.png);
+	
+}
+
+
+
+.index-banner-text .text-info {
+	margin-top:17px;
+	text-align:center;
+	color:#fff;
+	
+	
+}
+
+
+
+
+
+.index-banner-text  .text-info .line {
+	display:inline-block;
+	width:40px;
+	vertical-align:middle;
+	border-top:1px solid #fff;
+}
+
+
+.index-banner-text  .text-info .line-l {
+	margin-right:26px;
+}
+
+.index-banner-text  .text-info .line-r {
+	margin-left:26px;
+}
+
+.index-menu {
+	position:relative;
+	border-top:4px solid #f34949;
+}
+
+/* 这里没搞懂：居中的方法就是总宽度/2 */
+.index-menu .menu-tips {
+	position:absolute;
+	left:50%;
+	top:0;
+	margin-left:-78px;
+	width:156px;
+	height:75px;
+	text-align:center;
+	line-height:65px;
+	color:#fff;
+	background:#f34949;
+}
+
+/* 这里没搞懂：设置尖角 */
+.index-menu .menu-tips:after {
+	position:absolute;
+	content:' ';
+	left:0;
+	bottom:0;
+	width:0;
+	height:0;
+	border-left:78px solid transparent;
+	border-right:78px solid transparent;
+	border-bottom:10px solid #fff;
+}
+
+/* overflow：hidden觉得的干货 */
+.index-menu .menu-list {
+	margin-top:150px;
+	color:#555;
+	overflow:hidden;
+}
+
+.index-menu .menu-list ul{
+	width:1160px;
+}
+
+.index-menu .menu-item {
+	float:left;
+	width:520px;
+	margin-right:60px;
+	margin-bottom:56px;
+}
+
+.index-menu .menu-item .title, .index-menu .menu-item .line {
+	float:left;
+}
+
+.index-menu .menu-item .price {
+	float:right;
+}
+
+.index-menu .menu-item .title {
+	color:#555;
+	width:230px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+
+.index-menu .menu-item .comment {
+	margin-top:4px;
+	color:#b7b7b7;
+	font-size:12px;
+}
+
+.index-menu .menu-item .line {
+	width:192px;
+	margin-top:10px;
+	border-top:1px solid #e3e1e1;
+}
+
+
+.index-menu .menu-more-btn {
+	margin:0 auto;
+	width:130px;
+	height:32px;
+	padding-left:18px; 
+	border:1px solid #d7d5d5;
+	font-size:14px;
+	line-height:32px;
+	color:#b7b7b7;
+}
+
+.index-menu .icon{
+	display:inline-block;
+	width:11px;
+	height:7px;
+	margin-left:12px;
+	background:url(../images/menu-more-icon.jpg)
+}
+
+.index-panel {
+	margin-top:200px;
+}
+
+
+.index-panel-header h3 {
+	float:left;
+	font-size:20px;
+	color:#3b3b3b;
+	margin-right:48px;
+	font-weight:normal;
+}
+
+.index-panel-header .line {
+	float:left;
+	width:200px;
+	margin-top:8px;
+	border-top:1px solid #e5e3e3;
+}
+
+.index-panel-header .btn-group {
+	font-size:0;
+	float:right;
+}
+
+.index-panel-header .btn {
+	display:inline-block;
+	margin-left:11px;
+	width:9px;
+	height:9px;
+	background:#dedede;
+	border-radius:4.5px;
+}
+
+.index-panel-header .active {
+	background:#9b9b9b;
+}
+
+
+.index-panel-header .index-panel-body {
+	margin-top:75px;
+	
+}
+
+.index-panel-body {
+	margin-top:75px;
+}
+
+.index-food-list {
+	overflow:hidden;
+	
+}
+
+.index-food-list ul {
+	width:1160px;
+}
+
+
+
+
+
+
+
+.index-food-list .food-item {
+	float:left;
+	width:230px;
+	margin-right:60px;
+}
+
+.index-food-list .food-item .banner {
+	margin-bottom:30px;
+	height:202px;
+	
+}
+
+
+.index-food-list .food-item .banner:hover {
+	transition:0.2s ;
+	-ms-transition:0.2s ;
+	-moz-transition:0.2s ;     
+	-webkit-transition:0.2s ;  
+	-o-transition:0.2s ;     
+	
+	transform:scale(1.1,1.1);
+	-ms-transform:scale(1.1,1.1);
+	-moz-transform:scale(1.1,1.1);     
+	-webkit-transform:scale(1.1,1.1);  
+	-o-transform:scale(1.1,1.1);
+}
+
+
+
+
+
+
+
+
+
+
+.index-food-list .food-item .name {
+	color:#555;
+	margin-bottom:10px;
+}
+
+.index-food-list .food-item .price {
+	float:right;
+	
+}
+
+.index-food-list .food-item .star {
+	display:inline-block;
+	width:12px;
+	height:12px;
+	margin-right:5px;
+	background-image:url(../images/index-star.png);
+	background-repeat:no-repeat;
+	
+}
+
+.index-food-list .food-item .nostar {
+	background-position:0 -11px;
+}
+
+.index-pics {
+	height:380px;
+	overflow:hidden;
+}
+
+
+.index-pics .pic-col{
+	float:left;
+}
+
+.index-pics .pic-col-m {
+	width:352px;
+}
+
+
+
+.pic-col-s .pic-cow {
+	width:287px;
+}
+
+.index-pics .pic-col-l {
+	width:460px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ body { padding: 20px;}
+        #container { width: 1500px; height:570px;  overflow: hidden; position: relative;margin:0 auto}
+        #list { width: 10500px; height: 570px; position: absolute; z-index: 1;}
+        #list img { float: left;}
+        #buttons { position: absolute; height: 10px; width: 100px; z-index: 2; bottom: 20px; left: 250px;margin-left:500px}
+        #buttons span {
+				cursor: pointer; float: left; border: 1px solid #fff; width: 10px; height: 10px;
+				border-radius: 50%; background: #333; margin-right: 5px;}
+        #buttons .on {  background: orangered;}
+        .arrow { 
+				cursor: pointer; display: none; line-height: 39px; text-align: center; font-size: 36px; 
+				font-weight: bold; width: 40px; height: 40px;  position: absolute; z-index: 2; top: 180px;
+				background-color: RGBA(0,0,0,.3); color: #fff;
+				}
+        .arrow:hover { background-color: RGBA(0,0,0,.7);}
+        #container:hover .arrow { display: block;}
+        #prev { left: 20px;}
+        #next { right: 20px;}
+
+
+
+
+/* 动画区-css*/
+
+.pic-col {position:relative;}
+
+.color-content-1 {
+	
+	/* background:rgba(200,150,100,0.7); */
+	position:absolute;
+	left:0;
+	top:0;
+	width: 353px;
+    height: 382px;
+}
+
+.img-content-1 {
+	position:absolute;
+	left:0;
+	top:0;
+	text-align:center;
+	width: 353px;
+    height: 382px;
+	margin-top:150px;
+}
+
+.pic-col .h2-1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.pic-col .p-1 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    color: #fff;
+    padding: 10px 20px 20px;
+}
+.pic-col .info-1 {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+}
+
+.pic-col .info-1:hover {
+    box-shadow: 0 0 5px #fff
+}
+
+
+/* 动画区3-css*/
+
+.pic-3 {
+	position:relative;
+	width: 460px;
+    height: 381px;
+	overflow:hidden;
+}
+
+.color-content-3 {
+	
+	position:absolute;
+	left:0;
+	top:0;
+	width: 460px;
+    height: 381px;
+}
+
+.img-content-3 {
+	position:absolute;
+	left:0;
+	top:0;
+	text-align:center;
+	width: 460px;
+    height: 381px;
+	margin-top:150px;
+}
+
+.pic-3 .h2-3 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.pic-3 .p-3 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    color: #fff;
+    padding: 10px 20px 20px;
+}
+
+.pic-3 .info-3 {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+}
+
+.pic-3 .info-3:hover {
+    box-shadow: 0 0 5px #fff
+}
+
+/* 动画区2-css*/
+
+.two-img {
+	position:relative;
+	width: 287px;
+    height: 381px;
+	overflow:hidden;
+}
+
+.color-content-2 {
+	
+	position:absolute;
+	left:0;
+	top:0;
+	width: 287px;
+    height: 381px;
+}
+
+.img-content-2 {
+	position:absolute;
+	left:0;
+	top:0;
+	text-align:center;
+	width: 287px;
+    height: 381px;
+	margin-top:150px;
+}
+
+.pic-2 .h2-2 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.pic-2 .p-2 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    color: #fff;
+    padding: 10px 20px 20px;
+}
+
+.pic-2 .info-2 {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+}
+
+.pic-2 .info-2:hover {
+    box-shadow: 0 0 5px #fff
+}
+
+
+
+
+
+/* 动画区-transform和transition*/
+
+
+
+.pic-1:hover img{
+	transition: 0.2s linear;
+	transform: scale(1.1);
+}
+
+   
+.color-content-1{
+	opacity:0;
+	background-color: rgba(219,127,8, 0.3);
+
+}
+		
+.pic-1:hover .color-content-1{   /* 容易出错：理解下:放到pic-1上面 .color-content-1发生动画*/
+	opacity:1;
+	transition:all 0.3s ease-out;
+}
+
+
+.pic-1 .h2-1 {
+	opacity:0;
+	transform:translateY(-200px)
+}
+.pic-1:hover .h2-1{
+	opacity:1;
+	transform:translateY(0);
+	transition:all 0.5s ;
+}
+
+
+.pic-1 p {
+	opacity:0;
+	transform:translateY(200px)
+}
+.pic-1:hover p{
+	opacity:1;
+	transform:translateY(0);
+	transition:all 0.5s ;
+}
+
+
+.pic-1 .info-1{
+    opacity: 0;
+}
+.pic-1:hover .info-1 {
+    opacity: 1;
+	transition: all 0.2s ease-in-out 0.2s;
+}
+
+
+
+
+
+
+/* 动画区-transform和transition-3*/
+.pic-3:hover img{
+	transition: 0.2s linear;
+	transform: scale(1.1);
+}
+
+   
+.color-content-3{
+	opacity:0;
+	background-color: rgba(219,127,8, 0.3);
+
+}
+		
+.pic-3:hover .color-content-3{  
+	opacity:1;
+	transition:all 0.3s ease-out;
+}
+
+
+.pic-3 .h2-3 {
+	opacity:0;
+	transform:translateY(-200px)
+}
+.pic-3:hover .h2-3{
+	opacity:1;
+	transform:translateY(0);
+	transition:all 0.5s ;
+}
+
+
+.pic-3 p {
+	opacity:0;
+	transform:translateY(200px)
+}
+.pic-3:hover p{
+	opacity:1;
+	transform:translateY(0);
+	transition:all 0.5s ;
+}
+
+
+.pic-3 .info-3{
+    opacity: 0;
+}
+.pic-3:hover .info-3 {
+    opacity: 1;
+	transition: all 0.2s ease-in-out 0.2s;
+}
+
+
+
+
+
+
+
+/* 动画区-transform和transition-2*/
+
+.pic-2:hover img{
+	transition: 0.2s linear;
+	transform: scale(1.1);
+}
+
+   
+.color-content-2{
+	opacity:0;
+	background-color: rgba(219,127,8, 0.3);
+
+}
+		
+.pic-2:hover .color-content-2{  
+	opacity:1;
+	transition:all 0.3s ease-out;
+}
+
+
+.pic-2 .h2-2 {
+	opacity:0;
+	transform:translateY(-200px)
+}
+.pic-2:hover .h2-2{
+	opacity:1;
+	transform:translateY(0);
+	transition:all 0.5s ;
+}
+
+
+.pic-2 p {
+	opacity:0;
+	transform:translateY(200px)
+}
+.pic-2:hover p{
+	opacity:1;
+	transform:translateY(0);
+	transition:all 0.5s ;
+}
+
+
+.pic-2 .info-2{
+    opacity: 0;
+}
+.pic-2:hover .info-2 {
+    opacity: 1;
+	transition: all 0.2s ease-in-out 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
