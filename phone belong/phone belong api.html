@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+		body,dt,dl,h1,h2,h3,h4,h5,h6,p,form,ol,ul{margin:0;padding:0}
+		#menu {background:#D1E9E9;height:300px;width:153px;}
+		#div1{height:600px;width:300px;margin:0 auto;}
+		p{padding:10px 15px}
+    </style>
+
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.js"></script>
+    <script>
+		$(function(){
+			$('#btnSearch').click(function(){
+			    var menu = $('#menu')
+			    menu = menu.text('正在查询结果...')
+				var txt = $('#txtSearch').val()
+				txt1 = encodeURIComponent(txt)
+				$.ajax({
+					type:'get',
+					dataType:'jsonp',
+					url:'http://apis.juhe.cn/mobile/get?key=ed779e70f39e7b6d14d632c52e13ebb3&dtype=jsonp&phone=' +txt1,
+					success:function(data){
+					     menu.text('')
+						if(data.resultcode!=200){
+							menu.text('没找到此号码信息')
+							return;
+						}
+						
+							var mydata = data.result
+							var div1 = $('<div class="all"></div>')
+							menu.append(div1)
+							
+							var province = $('<p>'+'省份：'+mydata.province+'</p>')
+							div1.append(province)
+							
+							var city = $('<p>'+'城市：'+mydata.city+'</p>')
+							div1.append(city)
+							
+							var areacode = $('<p>'+'区号：'+mydata.areacode+'</p>')
+							div1.append(areacode)
+							
+							var zip= $('<p>'+'邮编：'+mydata.zip+'</p>')
+							div1.append(zip)
+							
+							var company = $('<p>'+'运营商：'+mydata.company+'</p>')
+							div1.append(company)
+							
+						//	var card = $('<p>'+'卡的类型：'+mydata.card+'</p>')
+						//	div1.append(card)
+
+						
+					},
+					error:function(e){
+					    menu.text('出错')
+					}
+				
+				})
+			})
+		})
+	</script>
+   
+
+   
+   
+  <!-- 处理IE不兼容placeholder  -->
+   <script>
+    $(function(){
+       function placeholder(target){
+           
+                $(target).val($(target).attr("datavalue")).addClass("inp");
+                $(target).focus(function() {
+                    if($(this).val() == $(this).attr("datavalue")) {
+                        $(this).val("").removeClass("inp");
+                    } 
+                    
+                })
+                $(target).blur(function(){
+                    if($(this).val() == "" || $(this).val() == $(this).attr("datavalue")) {
+                        $(this).val($(target).attr("datavalue")).addClass("inp");
+                    }
+                })
+        }
+placeholder(".ipt")
+})
+</script>
+
+   
+   </head>
+<body>
+<div id='div1'>
+	<!-- <input type="text"  id="txtSearch" placeholder='请输入查询的手机号码'>  -->
+	<input type="text"  id="txtSearch" datavalue='请输入查询的手机号码' class='ipt'> 
+	<input type="button" value="查询归属地" id="btnSearch" >
+	
+	<div id="menu">
+	
+	</div>
+
+</div>
+
+</body>
+</html>
+
+<!-- http://apis.juhe.cn/mobile/get?phone=13429667914&key=ed779e70f39e7b6d14d632c52e13ebb3&dtype=jsonp&callback=handle -->
+
+<!-- http://apis.juhe.cn/mobile/get?key=ed779e70f39e7b6d14d632c52e13ebb3&dtype=jsonp&callback=handle&phone=13429667914 -->
