@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>无线滚动轮播</title>
+	<style>
+		body,dl,dd,h1,h2,h3,h4,h5,h6,p,form,ol,ul{padding: 0;margin: 0}
+		a{text-decoration: none}
+		ul li{list-style: none}
+		
+
+		#contain{
+			width: 500px;
+			height: 200px;
+			border: 1px gray solid;
+			padding:7px;
+			overflow: hidden;
+			margin:100px auto; 
+			position: relative;
+		}
+		
+		
+		#box{
+			width:500px;
+			height: 200px;
+			position: absolute;
+		}
+	
+		#box{
+			overflow: hidden;
+		}
+
+		#buttons{
+			width: 200px;
+			height: 30px;
+		
+			position: absolute;
+			bottom: 5px;
+			left:200px;
+		}
+		
+		#buttons .on{
+			background: rgb(255,100,20)
+		}
+
+		#buttons span{
+			width: 10px;
+			height: 10px;
+			cursor:pointer;
+			margin-right: 10px;
+			background: rgba(200,200,200,0.9);
+			border:1px solid #fff;
+			border-radius: 5px;
+			float: left;
+			text-align: center;
+		}
+		
+
+		#box ul{
+			width:3500px;
+			position: absolute;
+			
+		}
+		
+		#box ul li{
+			float:left;
+		}
+	
+		.arrow{
+			position: absolute;
+			top:100px;
+			text-align: center;
+			width: 30px;
+			line-height: 40px;
+			height: 35px;
+			background: rgba(0,0,0,.2);
+			font:bold 30px '黑体';
+			color:#fff;
+			display: none;
+		}
+		
+		.arrow:hover{
+			background: rgba(0,0,0,.5);
+		}
+		#contain:hover .arrow{
+			display: block;
+		}
+		#prev{left:20px;}
+		#next{right:20px;}
+
+		#ul{
+
+		transition:left 2s;
+
+		-moz-transition:left 1s;  /*Firefox 4 */
+
+		-webkit-transition:left 1s; /* Safari and Chrome */
+
+		-o-transition:left 1s; /* Opera */*/
+
+	}
+
+	</style>
+</head>
+<body>
+	<div id='contain'>
+		<div id='box' class='box'>
+			<ul id="ul" style="left:-500px">            <!-- //-500是第一张 -->
+				<li><img src="img/05.jpg" alt=""></li>  <!-- //只起到长度的判断 -->
+				<li><img src="img/01.jpg" alt=""></li>
+				<li><img src="img/02.jpg" alt=""></li>
+				<li><img src="img/03.jpg" alt=""></li>
+				<li><img src="img/04.jpg" alt=""></li>
+				<li><img src="img/05.jpg" alt=""></li>
+				<li><img src="img/01.jpg" alt=""></li>   <!-- //只起到长度的判断 -->
+				
+			</ul>
+		</div>
+
+		<div id='buttons'>
+		<!-- 小圆点会用到，这里index 0开始 -->
+			<span index='1' class="on"></span>          <!-- //index唯一作用：定位原点到图片的位置 -->
+			<span index='2'></span>
+			<span index='3'></span>
+			<span index='4'></span>
+			<span index='5'></span>
+		</div>
+		
+		<a href="javascript:;" class='arrow' id='prev'><span>&lt</span></a>
+		<a href="javascript:;" class='arrow' id='next'><span>&gt</span></a>
+		
+	</div>
+
+	<script type="text/javascript">
+		var contain = document.getElementById('contain')
+		var ul = document.getElementById('ul')
+		var buttons = document.getElementById('buttons').getElementsByTagName('span')
+		var prev = document.getElementById('prev')
+		var next=  document.getElementById('next')
+		var timer='';	
+		var num = 1;   //关键：存在当前显示的是第几张图片或者第几个小圆点
+
+
+		//定时器
+		  function play() {
+                timer = setInterval(function () {
+                    next.onclick();
+                
+                }, 2000);
+            }
+
+          function stop() {
+                clearTimeout(timer);
+            }
+
+		contain.onmouseover = stop;
+		contain.onmouseout = play;
+		play()
+
+	
+		function anima(offset){
+				
+				var newLeft = parseInt(ul.style.left)+offset
+                    	
+                        ul.style.left = newLeft+'px'      
+						if(newLeft<-2500){
+							ul.style.left=-500+'px';  
+							}
+						if(newLeft>-500){
+							ul.style.left=-2500+'px';  
+							}
+ 
+				}
+
+
+	//showBtton 函数：判断去除on
+		function showButton(){
+			for(var i=0;i<buttons.length;i++){
+				if(buttons[i].className=='on'){
+					buttons[i].className='';
+					break;
+				}
+			}
+			
+			buttons[num-1].className='on'    //数组所以从0开始
+		}
+
+
+ 		prev.onclick = function(){
+ 			
+ 			if(num==1){
+ 				num=5
+ 			}else{
+ 				num--	
+ 			}
+ 			
+ 			showButton()
+
+ 			anima(500)
+
+ 		}         
+
+ 		next.onclick = function(){
+ 			
+ 			if(num==5){          
+ 				num=1
+ 			}else{
+ 				num++	
+ 			}
+ 			
+ 			showButton()      
+ 			
+ 			anima(-500)
+ 			
+ 			
+ 		}
+	
+ 		
+//定位小圆点对应的具体图片
+ 		for (var i = 0; i < buttons.length; i++) {
+                buttons[i].onclick = function () {
+                	//优化部分(当前的className值on的情况下点击不需要执行代码)
+                	if(this.className == 'on'){
+                		return
+                	}
+                  
+                   //newOffset这个公式，还有偏移量是在 ‘当前的’ 基础上 加减
+                    var myIndex = parseInt(this.getAttribute('index'));
+                    var newOffset = -500 * (myIndex - num);        
+
+                    anima(newOffset);     						   // newOffset偏移量还要加上本身的偏移量，第一张的位置是-500                      
+
+                    //切换完了index要归位
+                    num = myIndex;
+                   
+                   showButton()
+                }
+            }
+
+	</script>
+	
+
+</body>
+</html>
