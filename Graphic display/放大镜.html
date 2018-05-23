@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自己动手作品offset</title>
+    <style>
+    *{margin: 0;padding: 0}
+        #div1{
+            width: 400px;
+            height: 255px;
+            /*background: blue;*/
+            position: relative;
+            margin:100px 0 0  150px;
+            border:1px solid gray;
+        }
+
+         #div2{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            position: absolute;
+            opacity: 0.5;
+            /*cursor:move;*/
+            display: none;
+        }
+
+        #div3{
+            width: 300px;
+            height: 300px;
+            border:1px solid gray; 
+            overflow: hidden;
+            position: absolute;
+            left:600px;
+            top:100px;
+
+            display: none;
+
+
+        }
+
+        #div3 img{
+            position: absolute;
+
+        }
+    </style>
+</head>
+<body>
+    <div id='div1'>
+        <div id='div2'></div>
+        <img src='image/01.jpg'>
+    </div>
+   
+    <div id='div3'>
+        <img src="image/1.jpg" alt="">
+    </div>
+  
+    <script>
+        var div1 = document.getElementById('div1')
+        var div2 = document.getElementById('div2')
+        var div3 = document.getElementById('div3')
+        var imag = div3.getElementsByTagName('img')[0]
+
+        div1.onmouseover = function(){
+            div2.style.display = 'block';
+            div3.style.display = 'block';
+        }
+
+          div1.onmouseout = function(){
+            div2.style.display = 'none';
+            div3.style.display = 'none';
+        }
+
+        div1.onmousemove=function(e){
+            var e= e||window.event
+           // document.title = e.clientX-150 +'|'+(e.clientY-100)
+            
+             // document.title=div2.style.left = e.clientX-150 + 'px'
+             // document.title=div2.style.top =  e.clientY-100 + 'px'
+             // 
+             
+             var l = (e.clientX-150)- div2.offsetWidth/2         //不要加 px, 处理带style的有px单位，其他都没有
+             var t = (e.clientY-100)- div2.offsetHeight/2 
+             
+             if( l<0){
+                 l = 0
+             }else if(l>div1.offsetWidth-div2.offsetWidth){
+                l = div1.offsetWidth-div2.offsetWidth
+             }
+
+
+             if(t<0){
+                t = 0
+             }else if(t>div1.offsetHeight-div2.offsetHeight){
+                t = div1.offsetHeight-div2.offsetHeight
+             }
+
+            div2.style.left = l + 'px'
+            div2.style.top =  t + 'px'
+            
+           
+
+            var perX = l/(div1.offsetWidth-div2.offsetWidth)
+            var perY = t/(div1.offsetHeight-div2.offsetHeight)
+
+            imag.style.left = -perX*(imag.offsetWidth-div3.offsetWidth) + 'px'
+            imag.style.top =  -perY*(imag.offsetHeight-div3.offsetHeight) + 'px'
+           
+         
+          //  var l = (e.clientX-150)-div2.offsetWidth/2
+           // var t = (e.clientY-100)- div2.offsetWidth/2
+
+
+           // div2.style.left = (e.clientX-150)-div2.offsetWidth/2 + 'px'
+          //  div2.style.top =  (e.clientY-100)- div2.offsetWidth/2 + 'px'
+          //  document.title=l/(div1.offsetWidth-div2.offsetWidth)
+           // document.title=t/(div1.offsetHeight-div2.offsetHeight)
+        }
+
+    </script>
+    
+</body>
+</html>

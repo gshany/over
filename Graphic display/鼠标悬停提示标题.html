@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+        .demo{ 
+            width:350px;
+            margin:50px auto; 
+            text-align:left; 
+            padding:0; 
+        }
+        .list{ 
+            color:#2a6496;
+        }
+        .list li{ 
+            position:relative; 
+            width:320px;
+            list-style:decimal inside;
+            line-height:35px;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+        .list a{
+            font-size:18px;
+        }
+        .tip{
+            position:absolute;
+            left: 0;
+            display:none;
+            color:#fff;
+            background:rgba(0,0,0, 0.6);
+             line-height:25px;
+             font-size:12px;
+             padding:2px 5px;
+             border-radius:5px;
+             z-index:1
+         }
+
+    </style>
+</head>
+<body>
+<div id="div" class="demo">
+    <ol class="list">
+        <li></i><a href="#" data-title="我觉得能认识你，有点像某个极低概率的奇迹。">我觉得能认识你，有点像某个极低概率的奇迹。</a></li>
+        <li></i><a href="#" data-title="一个相似的背影，恍惚了整个曾经。">一个相似的背影，恍惚了整个曾经。</a></li>
+        <li></i><a href="#" data-title="只要有一双真诚的眼睛陪我哭泣，就值得我为生命受苦。">只要有一双真诚的眼睛陪我哭泣，就值得我为生命受苦。</a></li>
+        <li></i><a href="#" data-title="你在身边，你是一切。你不在身边，一切是你。">   你在身边，你是一切。你不在身边，一切是你。</a></li>
+        <li></i><a href="#" data-title="来生若是缘未尽 宁负苍天不负卿">来生若是缘未尽 宁负苍天不负卿</a></li>
+        <li></i><a href="#" data-title="    被世界遗弃不可怕，喜欢你有时还可怕"> 被世界遗弃不可怕，喜欢你有时还可怕</a></li>
+    </ol>
+</div>
+<script>
+    (function(){
+        var div = document.getElementById('div');
+        var links = div.getElementsByTagName('a');
+        var tip = createTip();
+        for(var i = 0; i < links.length; i++){
+            links[i].onmousemove = function(e){
+                e = e || event;
+                var title = this.getAttribute('data-title');
+                tip.innerHTML = title;
+                tip.style.display = 'block';
+                tip.style.left = e.clientX + 10 + 'px';
+                tip.style.top = e.clientY + 15 + 'px';
+            }
+            links[i].onmouseout = function(e){
+                tip.style.display = 'none'
+            }
+        }
+        function createTip(){
+            var div = document.createElement('div');
+            div.className = 'tip';
+            return document.body.appendChild(div);
+        }
+    }());
+</script>
+</body>
+</html>

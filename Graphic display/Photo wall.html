@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>照片墙-花</title>
+<style type="text/css">
+	body,dl,dd,h1,h2,h3,h4,h5,h6,p,ul,ol,form{margin:0;padding:0}
+	body{
+		/*background: rgba(20,20,20,0.8);*/
+	}
+	#section{
+		width: 1100px;
+		height: 440px;
+		margin: 0 auto;
+		margin-top: 100px;
+		position: relative;
+		
+	}
+	
+	.box{
+		width: 200px;
+		height: 200px;
+		float: left;
+		overflow: hidden;
+		margin:  10px;
+		position: relative;
+		box-shadow: rgb(100,100,100) 2px 3px  10px;
+	}
+
+	
+	.box:hover .info{
+		transform:rotate(0deg);
+		-webkit-transform:rotate(0deg);
+		-o-transform:rotate(0deg);
+		-moz-transform:rotate(0deg);
+		-ms-transform:rotate(0deg);
+		transition:all 0.5s;
+		-webkit-transition:all 0.5s;
+		-o-transition:all 0.5s;
+		-moz-transition:all 0.5s;
+		-ms-transition:all 0.5s;
+		background: rgba(255,0,0,0.5);
+	}
+
+	.info{
+		width: 200px;
+		height: 200px;
+		background: rgba(255,0,0,0.91);
+		position: absolute;
+		left:0;
+		top:0;
+		transform:rotate(90deg);
+		-webkit-transform:rotate(90deg);
+		-o-transform:rotate(90deg);
+		-moz-transform:rotate(90deg);
+		-ms-transform:rotate(90deg);
+		transform-origin:right bottom;
+		-webkit-transform-origin:right bottom;
+		-o-transform-origin:right bottom;
+		-moz-transform-origin:right bottom;
+		-ms-transform-origin:right bottom;
+	}
+
+	.info span{
+		width: 50px;
+		height: 50px;
+		border-radius: 30px;
+		color: rgba(255,0,0,1);
+		background: #fff;
+		display: block;
+		font-size: 50px;
+		font-weight: bold;
+		line-height: 50px;
+		text-align: center;
+		margin: 0 auto;
+		margin-top: 30px
+	}
+
+	.info p{
+		color: #fff;
+		text-align: center;
+		margin-top: 30px;
+		font:bold 20px/20px arial,sans-serif;
+	}
+
+
+
+
+</style>
+</head>
+<body>
+	<div id='section'>
+
+		<div class='box'>
+			<img src="image/勿忘我1.jpg" alt="">
+			<div class='info'>
+				<span>+</span>
+				<p>花名：勿忘我</p>
+			</div>
+		</div>
+		<div class='box'>
+			<img src="image/百合1.jpg" alt="">
+			<div class='info'>
+				<span>+</span>
+				<p>花名：百合</p>
+			</div>
+		</div>
+		<div class='box'>
+			<img src="image/蝴蝶兰1.jpg" alt="">
+			<div class='info'>
+				<span>+</span>
+				<p>花名：蝴蝶兰</p>
+			</div>
+		</div>
+		<div class='box'>
+			<img src="image/鸡蛋花1.jpg" alt="">
+			<div class='info'>
+				<span>+</span>
+				<p>花名：鸡蛋花</p>
+			</div>
+		</div>
+		<div class='box'>
+			<img src="image/康乃馨1.jpg" alt="">
+			<div class='info'>
+				<span>+</span>
+				<p>花名：康乃馨</p>
+			</div>
+		</div>
+		<div class='box'>
+			<img src="image/莲花1.jpg" alt="">
+			<div class='info'>
+				<span>+</span>
+				<p>花名：莲花</p>
+			</div>
+		</div>
+		<div class='box'>
+			<img src="image/太阳花1.jpg" alt="">
+			<div class='info'>
+				<span>+</span>
+				<p>花名：太阳花</p>
+			</div>
+		</div>
+		<div class='box'>
+			<img src="image/梅花1.jpg" alt="">
+			<div class='info'>
+				<span>+</span>
+				<p>花名：梅花</p>
+			</div>
+		</div>
+		<div class='box'>
+			<img src="image/向日葵1.jpg" alt="">
+			<div class='info'>
+				<span>+</span>
+				<p>花名：向日葵</p>
+			</div>
+		</div>
+		<div class='box'>
+			<img src="image/小皱菊1.jpg" alt="">
+			<div class='info'>
+				<span>+</span>
+				<p>花名：小皱菊</p>
+			</div>
+		</div>
+	
+	
+	</div>
+</body>
+</html>
