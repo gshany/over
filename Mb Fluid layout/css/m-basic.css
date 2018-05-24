@@ -1,0 +1,92 @@
+
+
+
+
+ html{font-size:625%}  /* 正常是62.5%  1rem=10px  现在是1rem=100px*/
+
+
+ img{display:block;}
+ 
+ 
+ /* 头部区域*/
+	.none{display:none}	
+	
+	#header {
+			width:100%;
+			height:.45rem;
+			background: #333;
+			
+			font-size:.16rem;
+			
+			box-shadow:0 2px 10px rgba(0,0,0,0.3);
+			position:relative;
+			z-index:99;
+			
+			position:fixed;
+			
+		}
+		
+		
+		
+	.link{
+		height:.45rem;
+		line-height:.45rem;
+		/* color:#fff; */
+	}
+	
+	.link li{
+		float:left;
+		
+		width:25%;
+		text-align:center;
+	}
+	
+	.link li a{
+		color:#fff;
+		padding:0 20px; 
+		display:block
+	}
+	
+	.link li a:hover,
+	.link .active 
+			{
+				background-color:#000;
+	 } 
+
+
+	
+	
+/* 底部区域*/
+		
+		#footer{ 
+			max-width:6.4rem;
+			font-size:0.16rem;
+			background:#222;
+			margin:0 auto;
+			text-align:center;
+			color:#fff;
+			padding:0.1rem 0 0.1rem 0;
+		}
+		
+		
+	.hr-10{height:2px}
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
