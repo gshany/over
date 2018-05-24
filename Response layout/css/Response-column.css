@@ -1,0 +1,1676 @@
+
+
+	#header{
+		width:100%;
+		height:70px;
+		background-color:#333;
+		position:fixed;
+		top:0;
+		z-index:999;
+	}
+	
+	#header .center{
+		max-width:1263px;
+		height:70px;
+		margin:0 auto;
+	}
+	
+	.logo {
+		/* width:240px; */
+		width:30%;
+		height:70px;
+		font-size:16px;
+		text-indent:-1000px;
+		background:url(../img/logo.png) left center no-repeat;
+		float:left;
+	}
+	
+	.none{
+		display:none;
+	}
+	
+	
+	.link{
+		width:56%;
+		height:70px;
+		line-height:70px;
+		float:right;
+	}
+	
+	.link li{
+		width:20%;
+		text-align:center;
+		float:left;
+	}
+	
+	.link li a{
+		color:#eee;
+		display:block;
+		/* padding:0 20px; */
+	}
+	
+	.link li a:hover,
+	.link .active a {
+		background:#000;
+	}
+	
+
+
+
+
+#headline {
+	max-width: 1920px;
+	padding:70px 0 0 0;
+	margin:0 auto;
+	position:relative;
+}
+
+#headline hgroup {
+	position:absolute;
+	top:45%;
+	left:18%;
+}
+#headline h2 {
+	color: #eee;
+	font-size: 45px;
+	letter-spacing: 1px;
+}
+#headline h3 {
+	color: #eee;
+	font-size: 24px;
+	letter-spacing: 1px;
+}
+
+
+
+
+/* 搜索*/	
+	#adver {
+		max-width:1920px;
+		padding:70px 0 0 0;
+		margin:0 auto;
+		position: relative;
+	}
+	
+
+	#adver .center {
+		width:40%;
+		height:60px;
+		background:#000;
+		position:absolute;
+		top:50%;
+		left:50%;
+		margin:-10px 0 0 -20%;
+		opacity:0.6;
+		border-radius:10px;
+	}
+
+	#adver .copy {
+		opacity:1;
+		background:transparent;
+		padding:3px 3px 0 3px;
+	}
+	
+	#adver .search {
+		width:70%;
+		height:52px;
+		background-color:#eee;
+		border:1px solid #666;
+		border-radius:10px;
+		font-size:24px;
+		color:#666;
+		outline:none;
+		padding:3px;
+		
+		display:block;
+		float:left;
+	}
+	
+	#adver .button {
+		width:30%;
+		height:54px;
+		background-color:#eee;
+		border:1px solid #333;
+		border-left-width:3px;
+		font-size:24px;
+		font-weight:bold;
+		border-radius:10px;
+		cursor:pointer;
+		color:#666;
+		outline:none;
+		
+		display:block;
+		float:right;
+	}
+		
+	
+/* 主内容区-首页*/
+
+	
+	#tour{
+			max-width:1263px;
+			height:1120x;
+			margin:20px auto;
+			text-align:center;
+		}
+
+		
+		
+	#tour h2{
+			margin:20px 0;
+			font-size: 45px;
+			letter-spacing: 2px;
+            color: #666;
+	}
+	
+	 #tour p{
+			margin:10px 0;
+            color: #666;
+			padding:0 10px;
+	 }
+	
+	 #tour figure{
+			width:32.4%;
+			border:1px solid #ddd;
+			display:block;
+			padding:4px;
+			margin:15px 0.4%;
+			position:relative;
+			float:left;
+	 }
+	 
+	 #tour .tour_title {
+		 height:40px;
+		 overflow:hidden;
+	 }
+	 
+	 #tour img{
+			vertical-align:middle;
+	
+	 }
+	
+	#tour .sat{
+			float:right;
+			position:relative;
+			left:-10px;
+			padding:20px 0 0 0;
+			font-size:14px;
+			color:#999;
+			font-weight:bold;
+	 
+	}
+	
+	 #tour .price{
+			float:left;
+			font-style:normal;
+			padding:20px 0 0 0;
+			color:#f60;
+			font-size: 14px;
+	}
+	
+	#tour .price strong{
+			font-size: 20px; 
+			letter-spacing: 1px;
+	}
+	
+	#tour .remark{
+			width:90px;
+			height:25px;
+			line-height:25px;
+			background:#59b200;
+			border-bottom-right-radius: 4px;
+			color:#fff;
+			font-size:14px;
+			letter-spacing:2px;
+			position:absolute;
+			left:6px;
+			top:5px;
+	}
+
+	
+
+
+
+	
+	
+/* 主内容区-关于公司*/
+	
+	#container {
+		max-width: 1263px;  
+		margin: 30px auto;
+		
+	}
+	
+	
+
+	
+	
+	#container .sidebar {
+		width: 28%;
+		float: right;
+	}
+	
+	#container .sidebox {
+		border: 1px solid #222;
+		margin: 0 0 10px 0;
+		text-align: center;
+	}
+	
+	#container .sidebox h2 {
+		font-size: 20px;
+		font-weight: normal;
+		letter-spacing: 1px;
+		text-indent: 8px;
+		height: 40px;
+		line-height: 40px;
+		background-color: #eee;
+		color: #666;
+		text-align: left;
+	}
+	
+	#container .tag {
+		padding: 10px 0;
+}
+	
+	
+	#container .tag li {
+		display: inline-block;
+		width: 100px;
+		height: 35px;
+		line-height: 35px;
+		margin: 2px 0;
+		background-color: #eee;
+		text-align: left;
+		text-indent: 8px;
+}
+	
+	#container .tag a {
+		display: block;
+		color: #999;
+	}
+	
+	#container .tag a:hover {
+		background-color: #458b00;
+		color: #fff;
+	}
+
+	
+	#container .figure {
+		padding: 10px 0;
+	}
+	
+	#container .hot figure {
+		display: inline-block;
+		padding: 4px;
+		color: #666;
+	}
+	
+	
+	#container .box {
+		padding: 10px 0;
+	}
+	
+	#container .box a {
+		display: inline-block;
+		width: 150px;
+		height: 40px;
+		line-height: 40px;
+		margin: 2px 0;
+		text-align: left;
+		text-indent: 35px;
+		color: #999;
+	}
+	
+	#container .box a.trea1 {
+		background: #eee url(../img/trea1.png) no-repeat 10px center;
+	}
+	#container .box a.trea2 {
+		background: #eee url(../img/trea2.png) no-repeat 10px center;
+	}
+	#container .box a.trea3 {
+		background: #eee url(../img/trea3.png) no-repeat 10px center;
+	}
+	#container .box a.trea4 {
+		background: #eee url(../img/trea4.png) no-repeat 10px center;
+	}
+	
+	.list {
+		width: 71%;
+		float: left;
+	}
+	
+	.list h2 {
+		height: 40px;
+		line-height: 40px;
+		font-size: 30px;
+		font-weight: normal;
+		border-bottom: 1px dashed #999;
+		padding: 0 0 15px 0;
+		color: #666;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	.about p {
+		font-size: 20px;
+		color: #666;
+		line-height: 2;
+		margin: 20px 0;
+	}
+	.about address {
+		font-style: normal;
+		font-size: 20px;
+		color: #666;
+		margin: 20px 0;
+		line-height: 1.6;
+	}
+	
+	
+	
+	
+	
+	
+/* 主内容区-旅游资讯*/	
+
+	
+	
+	
+	
+	/* .tour { */
+		/* width: 908px;  */
+		/* padding: 0; */
+		/* margin: 0 0 20px 0; */
+		/* overflow: hidden; */
+		/* border: 1px solid #eee; */
+		/* position: relative; */
+	 /* }  */
+	
+	.tour {
+		margin: 0 0 20px 0;
+		background-color: #fff;
+		overflow: hidden;
+		border: 1px solid #eee;
+		position: relative;
+	}
+	.tour img {
+		width:45%;
+		float: left;
+	}
+	 .tour figcaption {
+		width:55%;
+		float: right;
+	}
+	 .tour hgroup {
+		/* width: 55%; */
+		
+		width: 300px;
+	}
+	 .tour h2 {
+		font-size: 24px;
+		font-weight: normal;
+		padding: 10px 0 10px 25px;
+		color: #333;
+		
+		line-height:1;
+		height:15px;
+		
+		border:none;
+	}
+	
+	.tour h3 {
+		font-size: 16px;
+		color: #666;
+		line-height: 1.5;
+		font-weight: normal;
+		padding: 10px 0 10px 25px;
+		
+		/* overflow: hidden; */
+	}
+	
+
+	
+	.tour ol {
+		padding: 0 0 0 25px;
+		color: #666;
+		line-height: 2;
+	}
+	.tour mark {
+		background-color: #fff;
+		border: 1px solid #458b00;
+		border-radius: 4px;
+		padding: 0 5px;
+		color: #458b00;
+	}
+	.tour .buy {
+		position: absolute;
+		top: 55px;
+		right: 30px;
+	}
+	.tour .price {
+		color: #f60;
+		font-size: 20px;
+	}
+	.tour .price strong {
+		font-size: 36px;
+	}
+	.tour .price s {
+		font-size: 16px;
+		color: #999;
+	}
+	.tour .reserve {
+		margin: 10px 0 0 0;
+	}
+	.tour .reserve a {
+		display: block;
+		width: 152px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		border-radius: 4px;
+		font-size: 20px;
+		color: #fff;
+		background-color: #f60;
+	}
+	.tour .type {
+		width: 90px;
+		height: 25px;
+		line-height: 25px;
+		font-size: 14px;
+		text-align: center;
+		color: #fff;
+		background-color: #59b200;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.tour .disc {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 52px;
+		height: 52px;
+		background: url(../img/disc.png) no-repeat;
+	}
+	.tour .disc span {
+		display: block;
+		transform: rotate(45deg);
+		width: 52px;
+		height: 52px;
+		padding: 5px 0 0 0;
+		text-indent: 7px;
+		font-size: 14px;
+		color: #ff7a4d;
+	}
+	.tour footer {
+		width: 55%;
+		height: 30px;
+		line-height: 30px;
+		letter-spacing: 1px;
+		text-indent: 25px;
+		background-color: #fafafa;
+		position: absolute;
+		bottom: 0;
+	}
+	.tour time {
+		color: #458b00;
+	}
+	.information .more {
+		width: 200px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		margin: 0 auto;
+		border: 1px solid #ccc;
+		background-color: #fafafa;
+		border-radius: 10px;
+		cursor: pointer;
+		font-size: 18px;
+		color: #666;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+/* 主内容区-旅游资讯*/	
+
+
+	
+	.scenery figure{
+		width:32.6%;
+		display:block;
+		border:none;
+		border-radius: 4px;
+		margin:15px 5px 15px 0;
+		border: 1px solid #ddd;
+		
+		float:left;
+	}
+
+	/* .scenery figcaption { */
+		/* text-align: center; */
+		/* padding: 5px 0; */
+		/* font-size: 20px; */
+		/* color: #666; */
+	/* } */
+
+	
+	
+	.scenery figure {
+	border: 1px solid #ddd;
+	display: block;
+	padding: 4px;
+	border-radius: 4px;
+	width: 32.6%;
+	margin: 15px 5px 15px 0;
+	text-align: left;
+	float: left;
+}
+	
+
+
+	.scenery .more {
+		width: 200px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		margin: 0 auto;
+		border: 1px solid #ccc;
+		background-color: #fafafa;
+		border-radius: 10px;
+		cursor: pointer;
+		font-size: 18px;
+		color: #666;
+		clear:both;
+	}
+	
+
+
+
+
+
+
+/* 主内容区-票务*/
+
+	.ticket {
+		color: #666;
+	}
+	.ticket .type {
+		font-size: 20px;
+		margin: 20px 0 10px 0;
+		border: none;
+	}
+	.ticket .type mark {
+		color: #fff;
+		background-color: #458B00;
+		padding: 5px 8px;
+		border-radius: 4px;
+		margin: 0 10px 0 16px;
+	}
+	.ticket .form {
+		font-size: 20px;
+		border: none;
+	}
+	.ticket .form p {
+		line-height: 3;
+	}
+	.ticket .form input {
+		width: 250px;
+		height: 30px;
+		border: 1px solid #ccc;
+		background-color: #fff;
+		border-radius: 4px;
+		padding: 5px;
+		font-size: 18px;
+		color: #666;
+		margin: 0 0 0 16px;
+	}
+	.ticket .left {
+		width: 43%;
+		display: inline-block;
+	}
+	.ticket .right {
+		width: 43%;
+		display: inline-block;
+	}
+	.ticket .button {
+		width: 9%;
+		display: inline-block;
+	}
+	.ticket .submit {
+		display: inline-block;
+		width: 90px;
+		height: 90px;
+		line-height: 90px;
+		border-radius: 4px;
+		background-color: #f60;
+		color: #fff;
+		font-size: 20px;
+		text-align: center;
+		border: none;
+		cursor: pointer;
+		position: relative;
+		top: -28px;
+	}
+	.ticket .new {
+		margin: 20px 0 0 0;
+		font-size: 20px;
+	}
+	.ticket .new ul {
+		margin: 20px 0 0 0;
+	}
+	.ticket .new li {
+		display: inline-block;
+		padding: 5px 10px;
+	}
+	.ticket .new li:first-child {
+		padding-left: 0;
+	}
+	.ticket .new li:nth-child(2) {
+		background-color: #458B00;
+		border-radius: 4px;
+		color: #fff;
+	}
+	.ticket table {
+		width: 100%;
+		border-collapse:collapse;
+		margin: 20px 0 0 0;
+		border: 1px solid #ddd;
+	}
+	.ticket table th {
+		height: 50px;
+		line-height: 50px;
+		border-bottom: 1px solid #ddd;
+		font-weight: normal;
+	}
+	.ticket table td {
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+	}
+	.ticket table tr:nth-child(2n) {
+		background-color: #fafafa;
+	}
+	.ticket table tr:hover {
+		background-color: #eee;
+	}
+	.ticket .price {
+		color: #f60;
+	}
+	.ticket .more2 {
+		text-align: center;
+		font-size: 18px;
+		margin: 0 auto;
+		cursor: pointer;
+		display: block;
+		color: #666;
+	}
+	.ticket .reserve {
+		display: inline-block;
+		width: 80px;
+		height: 35px;
+		line-height: 35px;
+		border-radius: 4px;
+		background-color: #f60;
+		color: #fff;
+		font-size: 20px;
+		text-align: center;
+	}
+
+
+	
+	
+	.ticket .more {
+		text-align: center;
+		font-size: 18px;
+		margin: 0 auto;
+		cursor: pointer;
+		display: block;
+		color: #666;
+	}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/* 底部*/
+		#footer{ 
+			background:#222; 
+			position:relative;
+			top:20px;
+		}
+		
+		#footer .top{
+			max-width:1263px;
+			height:280px;
+			/* color:#fff; */
+			text-align:center; 
+			margin:0 auto;
+		}
+		
+		#footer .block{
+			width:33.3%;
+			color:#ccc;
+			/* vertical-align:top;  */
+			text-align:left; 
+			display:block;
+			float:left;
+		}
+		
+		#footer hr{
+			width:90%;
+			border:1px solid #333;
+		}
+			
+		#footer h2 {
+			font-weight: normal;
+			padding: 0px 0 0 20px;
+			font-size: 24px;
+		}
+
+	
+		#footer ul {
+			color: #666;
+			font-size: 18px; 
+			padding:0 0 0 20px;
+			line-height: 2;
+		}
+	
+		#footer .bottom{
+			width:100%;
+			padding:15px;
+			background:#000;
+			text-align:center;
+			color:#666;
+		}
+	
+
+	
+	
+	/* 页面大于1200px时 (大屏,主要是PC端)*/
+	@media (min-width:1200px) {
+		
+	}
+	
+	
+	/* 页面992px和1199px之间时 (中屏) */	
+	@media (min-width:992px) and (max-width:1199px) {
+		#adver .center {
+			width:50%;
+			margin:-10px 0 0 -25%;
+		}
+		
+		#tour h2{
+			font-size: 40px;
+		}
+			
+		#headline  h2{
+			font-size: 36px;
+		}
+		
+		#headline h3{
+			font-size: 20px;
+		}
+		
+		.sidebar {
+			display:none;
+		}
+		
+		#container .list {
+			width:100%;
+			padding:0 20px;
+		}
+		
+	
+		
+	
+	}
+	
+	/* 页面768px和991px之间时 (小幕,主要是PAD)*/	
+	@media (min-width:768px) and (max-width:991px) {
+		#adver .center {
+			width:60%;
+			margin:-10px 0 0 -30%;
+		}
+		
+		#adver .search,#adver .button {
+			font-size:20px;
+		}
+		
+		#adver .center {
+			height:53px;
+		}
+		
+		#adver .search,#adver .button {
+			height:45px;
+		}
+	
+		
+		#headline h2{
+			font-size: 30px;
+		}
+		
+		#headline h3{
+			font-size: 16px;
+		}
+	
+		#headline hgroup{
+			left:8%;
+		}
+		
+		.sidebar {
+			display:none;
+		}
+		
+		#container .list {
+			width:100%;
+			padding:0 20px;
+		}
+		
+		.list h2 {
+			font-size: 28px;
+		}
+		.about p,.about address {
+			font-size: 18px;
+		}
+		
+		.md-hidden{
+			display:none;
+		}
+		
+		.tour h2{
+			font-size:22px;
+		}
+		
+		.tour .buy {
+			position: absolute;
+			top: auto;
+			right: auto;
+			bottom:0;
+			padding:0 0 0 25px;
+		}
+		
+			
+			
+			
+			
+			.scenery figure {
+				 width: 48.2%;
+			}
+			.scenery figcaption {
+				font-size: 18px;
+			}
+			
+			
+			
+		.ticket .left, .ticket .right, .ticket .button {
+			width: 98%;
+			display: block;
+		}
+		.ticket .form input {
+			width: 98%;
+			height: 35px;
+			margin: 0;
+		}
+		.ticket .form p {
+			line-height: 2;
+		}
+		.ticket .submit {
+			display: block;
+			width: 30%;
+			height: auto;
+			line-height: 2;
+			position: static;
+			margin:10px auto;
+		}
+			
+			
+		
+		
+	}
+
+
+	/* 页面480px和767px之间时 (超小幕,主要是手机)*/	
+	@media (min-width:480px) and (max-width:767px) {
+		.logo,.sm-hidden,.sidebar{
+			display:none;
+			}
+		
+		.link {
+			width:100%;
+			line-height:45px;
+			}
+		
+		#header,.link,#adver.center {
+			height:45px;
+			
+			}
+		
+		#adver {
+			padding:45px 0 0 0;
+			}
+		
+		#adver .center {
+			width:70%;
+			margin:-10px 0 0 -35%;
+			}
+		
+		#adver .search,#adver .button{
+			font-size:18px;
+			}
+		
+		#tour h2{
+			font-size: 30px;
+			}
+			
+			#tour figure{
+				width:49%
+			}
+			
+			#headline hgroup{
+				left:8%;
+			}
+			
+			#headline h2{
+				font-size: 26px;
+			}
+		
+			#headline h3{
+				font-size: 14px;
+			}
+			
+			#headline {padding:45px 0 0 0}
+			
+		
+			#container .list {
+				width:100%;
+				padding:0 20px;
+			}
+			
+			.list h2 {
+				font-size: 25px;
+			}
+			.about p,.about address {
+				font-size: 15px;
+			}
+			
+			.md-hidden {
+				display:none;
+			} 
+			
+			.tour h2{
+				font-size:16px;
+				padding:5px 0 10px 15px;
+			}
+			
+			.tour h3{
+				font-size:14px;
+				/* height:20px; */
+				padding:5px 0 10px 15px;
+			}
+		
+			.tour .buy {
+				position: absolute;
+				top: auto;
+				right: auto;
+				bottom:0;
+				padding:0 0 0 25px;
+			}
+		
+			.tour .buy strong{
+				font-size:18px;
+			}
+			
+
+			.scenery figure {
+				 width: 48.2%;
+			}
+			.scenery figcaption {
+				font-size: 18px;
+			}
+			
+			
+			.ticket .left, .ticket .right, .ticket .button {
+				width: 98%;
+				display: block;
+			}
+			.ticket .form input {
+				width: 98%;
+				height: 35px;
+				margin: 0;
+			}
+			.ticket .form p {
+				line-height: 2;
+			}
+			.ticket .submit {
+				display: block;
+				width: 30%;
+				height: auto;
+				line-height: 2;
+				position: static;
+				margin:10px auto;
+			}
+			.ticket .type, .ticket .form, .ticket .new, .ticket .form input, .ticket .submit, .ticket .reserve {
+				font-size: 16px;
+			}
+			
+		}
+		
+	
+		
+		
+
+/* 页面小于480px时 (超小幕,主要是手机)*/	
+	@media(max-width:479px) {
+		.logo,.show-hidden,.sm-hidden,.sidebar,.md-hidden, .xs-hidden {
+			display:none;
+			}
+		
+		.link li {
+			width:25%;
+			}
+		
+		.link {
+			width:100%;
+			line-height:45px;
+			}
+		
+		
+		#header,.link,#header .center {
+			height:45px;
+			}
+		
+		#adver {
+			padding:45px 0 0 0;
+			}
+		
+		#adver .center {
+			width:80%;
+			margin:-10px 0 0 -45%;
+			}
+		
+		#adver .search,#adver .button {
+			font-size:16px;
+			}
+			
+				
+		#adver .center {
+			height:46px;
+			}
+		
+		#adver .search,#adver .button {
+			height:38px;
+			}
+			
+			#footer .bottom{
+				font-size:14px
+			}
+			
+			#tour h2{
+			font-size: 26px;
+			}
+			
+			#tour figure{
+				width:99%
+			}
+			
+			#headline hgroup{
+				left:8%;
+			}
+			
+			#headline h2{
+				font-size: 20px;
+			}
+		
+			#headline h3{
+				font-size: 12px;
+			}
+		
+			#headline {padding:45px 0 0 0}
+			
+		
+			#container .list {
+				width:100%;
+				padding:0 20px;
+			}
+			
+			.list h2 {
+				font-size: 22px;
+			}
+			.about p,.about address {
+				font-size: 14px;
+			}
+			
+			.tour h2{
+				font-size:16px;
+				padding:5px 0 5px 15px;
+			}
+			
+			.tour h3 {
+				font-size: 14px;
+				padding: 5px 0 5px 15px;
+				height: 15px;
+				overflow: hidden;
+			}
+		
+			.tour .buy {
+				position: absolute;
+				top: auto;
+				right: auto;
+				bottom:0;
+				padding:0 0 0 25px;
+			}
+		
+			.tour .buy strong,.tour .buy .price,.tour .buy .price s{
+				font-size:15px;
+			}
+
+			.scenery figure {
+				 width: 100%;
+			}
+			.scenery figcaption {
+				font-size: 16px;
+			}
+
+			
+			.ticket .left, .ticket .right, .ticket .button {
+				width: 98%;
+				display: block;
+			}
+			.ticket .form input {
+				width: 98%;
+				height: 35px;
+				margin: 0;
+			}
+			.ticket .form p {
+				line-height: 2;
+			}
+			.ticket .submit {
+				display: block;
+				width: 30%;
+				height: auto;
+				line-height: 2;
+				position: static;
+				margin:10px auto;
+			}
+			.ticket .type, .ticket .form, .ticket .new, .ticket .form input, .ticket .submit, .ticket .reserve {
+				font-size: 14px;
+			}
+			.ticket .reserve {
+				display: inline-block;
+				width: auto;
+				height: auto;
+				line-height: 1;
+				border-radius: 4px;
+				background-color: #f60;
+				color: #fff;
+				padding: 8px;
+				text-align: center;
+			}
+			
+		
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

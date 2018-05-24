@@ -1,0 +1,82 @@
+
+
+	body,dl,dd,h1,h2,h3,h4,h5,h6,p,form,ol,ul,figure{padding:0;margin:0}	
+	
+	
+	
+	ol,ul{list-style:none}
+	
+	
+	
+	a{text-decoration:none}
+		/* img{border:none;display:block} */
+	
+	
+	body {
+		background-color: #f5f5f5;
+		font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaheiUI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+	}
+	
+	/* body{font-size:0.16rem;} */
+	
+	
+		
+	input,button{
+		outline:none
+	}
+	
+	
+	
+	
+	.clearfloat{zoom:1}
+	
+	.clearfloat:after{
+		clear:both;
+		content:'';
+		display:block;
+		height:0;
+		visibility:hidden;
+	}
+	
+	
+/* 要自适应图片必须先这样设置 固定格式 */		
+	
+	img{
+		display:block;
+		max-width:100%;
+	}
+	
+	
+	div,figure,img,input,button {
+		box-sizing: border-box;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
