@@ -1,0 +1,1878 @@
+
+/*公用*/
+	
+	.public-width {
+		width:1000px; margin-left:auto; margin-right:auto;
+	}
+	
+	.hide{display:none}
+	.show{display:block}
+	
+	.topBar {
+		height:31px;background:#F7F7F7;line-height:31px;
+	}
+	 
+	 /*padding-left:17px;为什么五角星图标没动，因为五角星已经定位了left center; left就是左边为(0,0)的意思  */
+	.collection {
+		background:url(../images/icon/index-star.jpg) left center no-repeat;
+		padding-left:17px;
+		font-weight:bold;
+		}
+	
+	.leftArea{float:left;}
+	.rightArea{float:right;}
+	
+	.topBar a:hover {color:#ce1029}
+	
+/*logo*/
+	.logoBar {
+		height:85px;
+		background:#1d7ad9;
+	}
+	
+	.logoBar .logo{
+		padding-left:41px;
+		padding-top:13px;
+		
+	}
+	
+	
+
+	
+	
+	
+	
+	.logoBar .search-box {
+		width:430px;
+		padding-top:23px;
+		padding-left:185px;
+	}
+	
+	/* .logoBar .search-text { */
+		/* width:350px; */
+		/* height:35px; */
+		/* padding:0 5px; */
+		
+	/* } */
+	
+	/* 兼容IE6的写法*/
+	.logoBar .search-text {
+		width:350px;
+		height:35px;
+		line-height:35px\9;
+		padding:0 5px;
+		background:#fff;
+	}  
+	
+	.logoBar .search-btn {
+		width:70px;
+		height:35px;
+		font-size:14px;
+		font-family:"微软雅黑";
+		background:#ff8c00;
+		color:#fff;
+	}
+	
+	.logoBar .shopCar {
+		width:145px;
+		height:35px;
+		margin-right:59px;
+		background:#ff8c00;
+		margin-top:23px;
+		color:#fff;
+		font:14px/35px '微软雅黑';
+	}
+	
+	
+	
+	.shopCar .shopText {
+		width:87px;
+		height:100%;
+		text-indent:40px;
+		border-right:1px #e27a00 dotted;
+		background:url(../images/icon/shop-car.jpg) 11px center no-repeat;
+	}
+	
+	.shopCar .shopNum {
+		width:27px;
+		height:100%;
+		border-left:1px #ff9c01 solid;
+		background:url(../images/icon/triangle.jpg) 34px center no-repeat;
+		text-align:right;
+		padding-right:29px;
+	}
+	
+	
+/*导航*/	
+
+
+
+	/*color继承性不包括<a>标签 所以.navBox 里面的color:#fff,只对商品分类有效 */
+	.navBox {
+		height:35px;
+		background:#1369c0;
+		color:#FFF;
+	}
+	
+	.shopClass {
+		width:190px;
+		position:relative;
+	}
+	
+	.shopClass h3{text-align:center;line-height:35px;}
+	
+	
+	/*技巧要掌握*/
+	 /*margin-left:17px; 所以图标要动,因为是margin-left不是padding-left  */
+	.shopClass i {
+		width:11px;
+		height:7px;
+		display:inline-block;
+		margin-left:11px;
+		background:url(../images/icon/nav-title.png) left center no-repeat;
+	}
+	
+	.shopClass,.nav {
+		font-family:"微软雅黑";
+	}
+	
+	.nav {line-height:35px;}
+	
+	.nav li{float:left;}
+	
+	.nav a {
+		height:35px;
+		display:inline-block;
+		padding:0 35px;
+		color:#FFF;
+	}
+	
+	.nav .active{
+		background:#4593fd;
+	}
+
+
+/* 商品左侧列表选择框 */
+	
+	.shopClass-show {
+		background:#4593fd;
+		position:absolute;
+		left:0px;
+		top:35px;
+		width:190px;
+									/* 出了一个大问题这里设置了高度:height:64px; 这里设置了高度导致复制几份,没有看到背景 */
+	}
+	
+	.shopClass-show .b {
+		font-family:"微软雅黑";
+		font-size:14px;
+		
+		/*font:14px/1 'Microsoft YaHei','微软雅黑' */;
+	}
+	
+	.shopClass-item {padding:14px 10px;border-top:1px #5aa1fe solid;border-bottom:1px #3487f2 solid;}
+	
+	.shopClass-item dt {
+		height:19px;
+		background:url(../images/icon/dt-triangle.png)  right center no-repeat;
+	}
+	
+	.shopClass-item a {color:#fff}
+
+	/* background只是插入的一个背景,然后在背景上文字居中,行高设置很正常*/
+	.aLink {
+		width:48px;
+		height:20px;
+		background:url(../images/icon/dt-icon.png) left center no-repeat;
+		display:inline-block;
+		text-align:center;
+		line-height:20px;
+		text-decoration:underline;
+	}
+
+
+	
+	
+/* 商品左侧active效果*/
+	
+	.shopClass-show  .active {
+		background-color:#fff;
+		border-left:1px solid #4593fd;
+	}
+	
+	.active dt {background:none;}
+	
+	.active a{
+		color:#000;
+	}
+	
+	.active .aLink {
+		color:#fff;
+		text-decoration:none;
+	}
+	
+
+/* 商品左侧列表选择框 弹出框*/
+
+	
+	/* .shopClass-list不能设置高度，后续增加内容可以自适应*/
+	/* .shopClass有个相对定位,这里就可以用绝对定位,如果没有就会以body(0,0)定位*/
+	.shopClass-list {
+		width:570px;
+		position:absolute;
+		top:35px;
+		left:190px;
+		border:1px #ddd solid;
+	}
+
+	
+	/* 技巧:嵌套一个div,然后左右padding值设置为20px.成功解决了.shopList-item里面的border居中问题;注意灵活运用*/
+	.shopClass-list .content {
+		padding:0 20px;
+	}
+	
+	.shopList-item  {
+		padding:10px 0;
+		border-bottom:1px #e5e5e5 solid;
+	}
+	
+	
+	dt{
+		color:#4b88da;
+		font-weight:bold;
+		height:24px;
+		line-height:24px;
+	}
+
+	/* 注意dd dt都是块级元素 这里可以margin-top;注意灵活运用*/
+	.shopList-item dd {
+		padding-left:68px;
+		margin-top:-24px;
+		line-height:24px;
+	}
+
+	.shopList-item dd a {
+		margin-right:13px;
+	}
+
+	
+	.shopList-links {
+		padding:15px;
+	}
+
+	.shopList-links a {
+		background-color:#2785e6;
+		color:#fff;
+		padding:0 14px 0 8px;
+		height:26px;
+		margin-right:10px;
+		line-height:26px;
+		display:inline-block;
+	}
+
+	.shopList-links span {
+		width:5px;
+		height:8px;
+		margin-left:8px;
+		display:inline-block;
+		background:url(../images/icon/dt-triangle.png) left center no-repeat;
+	}
+
+
+
+shopList {
+	width:500px;
+	height:200px;
+	background:red;
+	border:30px solid orange;
+}
+
+
+/*banner  下面有整合的这些代码就隐藏了不然重复
+
+	.bannerBar {
+		width:810px;
+		height:332px;
+		float:right;
+		position:relative;
+		overflow:hidden;
+	}
+	.imgBox {
+		width:1620px;
+		height:332px;
+		position:absolute;
+		left:0;
+		top:0;
+		
+	}
+	
+	.imgBox li {
+		float:left;
+	}
+
+	.imgBox img {
+		width:810px;
+		height:332px;
+		display:block;
+	}
+
+	
+	/*终于懂了:如果不设置宽度100%,text-align:center就无法居中
+	.imgNum {
+		position:absolute;
+		left:0;
+		bottom:25px;
+		width:100%;
+		text-align:center;
+		background-color:rgba(225,225,225,0.8);
+	}
+	
+	.imgNum a{
+		width:20px;
+		height:5px;
+		overflow:hidden;
+		display:inline-block;
+		margin:0 3px;
+		background-color:#fff;
+		
+	}
+	
+	.imgNum .imgNum-1 {
+		background-color:#FF7700;
+	}
+
+
+*/
+	
+	
+/*banner 整合成模板代码*/
+	.banner { margin-bottom:15px;}
+	.bannerBar {float:right;position:relative;overflow:hidden;}
+	.imgBox {position:absolute;left:0;top:0;}
+	
+	.imgBox li {float:left;}
+
+	.imgBox img {display:block;}
+
+	.imgNum {position:absolute;left:0;bottom:25px;width:100%;text-align:center;background-color:rgba(225,225,225,0.8);}
+	
+	.imgNum a{width:20px;height:5px;overflow:hidden;display:inline-block;margin:0 3px;background-color:#fff;}
+	
+	.imgNum .imgNum-1 {background-color:#FF7700;}
+	
+
+	.bannerBig ,
+	.bannerBig img {width:810px;height:326px;}
+	.bannerBig  .imgBox {width:1620px;height:326px;}
+	
+	
+	.bannerSml,
+	.bannerSml img {width:190px;height:400px;}
+	.bannerSml .imgBox {width:380px;height:400px;}
+
+
+
+	
+
+/*商品标题*/
+	.shopTit {
+		height:44px;
+		font-family:"微软雅黑";
+		line-height:44px;
+		margin-bottom:15px;
+	}
+	
+	.shopTit .icon {
+		width:44px;
+		height:44px;
+		background:url(../images/icon/shop-icon.png) left top no-repeat;
+		/*display:inline-block;  浮动以后这个就没必要了*/
+		float:left;
+	}
+	
+		
+	.shopTit h3 {
+		font-size:24px;
+		float:left;
+		padding-left:15px;
+		font-weight:normal;
+		}
+	
+	.more{
+		
+		float:right;
+		font-family:"宋体";
+		}
+	
+
+	
+	
+
+	
+	
+	
+/*商品列表*/		
+	
+ .shopList .leftArea {width:190px}
+ .shopList .rightArea {width:808px;
+		border:1px solid #999;
+		border-bottom:3px solid #FF7201;
+		height:396px;
+		
+		overflow:hidden;
+		}
+	
+	
+/*商品列表-右侧*/
+	
+	.shopList-top {margin-right:-5px;}
+ 	.shop-item {
+		width:202px;
+		height:279px;
+		border-right:1px solid #999;
+		border-bottom:1px solid #999;
+		text-align:center;
+		font-family:"微软雅黑";
+		
+		float:left;
+	}
+
+	.shop-img {
+		height:218px;
+		
+	}
+
+	.shop-img img{
+		height:218px;
+		width:100%;
+		display:block;
+	}
+	
+	.shop-item p {
+		font-size:14px;
+		color:#ff7300;
+		line-height:21px;
+	}
+	
+/*商品列表-小*/
+	.shopList-sm {margin-right:-5px;}
+
+	.shopItem-sm {
+		width:202px;
+		height:116px;/*易出错：不写高度;下面border-right就没法显示出来*/	
+		border-right:1px solid #999;
+		
+		float:left;
+	}
+	
+	.shopItem-smImg {
+		width:95px;
+		height:95px;
+		text-align:center;
+		float:left;
+	}
+	
+	.shopItem-smImg img {
+		width:95px;
+		height:95px
+	}
+	
+	.shopItem-text {
+		padding-top:28px;
+		width:100px;    /*文字也是div;记得要给宽度，否则出错*/
+		float:left;
+	}
+	
+	.shopItem-text p {
+		color:#ff7300;
+	}
+	
+	.shopItem-text h3 {
+		font-family:"微软雅黑";
+		font-size:16px;
+		font-weight:normal;
+		line-height:30px;
+	}
+	
+	
+ /* 复制的一份  设置间距*/
+	.shopList {margin-bottom:15px}
+	
+	
+
+ /* footer部分*/	
+	
+	.footer {
+		font-family:"微软雅黑";
+		line-height:24px;
+		padding:50px 0;
+		text-align:center;
+		background:#d4d4d4 ;
+	}
+	
+	.footer i{
+		margin:0 5px;
+		font-style:normal;
+	}
+	
+	.footer a{
+		color:#000;
+	}
+	.footer a:hover{
+		color:#ff7300;
+	}
+	
+	.footerImg {
+		padding-top:30px;
+		padding-bottom:50px;
+	} 
+	
+	
+	.footerImg img {
+		margin-right:24px;
+		display:inline-block;
+	}
+	
+	
+ /* 拉开footer与上面的间距*/
+	.height-25 {
+		height:25px;
+	}
+	
+	
+ 
+ /* 分类页---左边导航*/	
+  .products .leftArea {width:183px;}
+  .products .rightArea {width:810px;}
+  .products .bannerBar {float:none;}
+  .products .item {width:25%}
+  
+  
+.leftNav {
+	  background:#f3f3f3;
+	  border:1px solid #d7d7d7;
+  }
+  
+  .nav-title {
+	  height:34px;
+	  line-height:34px;
+	  color:#555555;
+	  text-align:center;
+	  font-size:14px;
+	  font-family:"宋体";
+	  border-bottom:1px solid #d7d7d7;
+  }
+	
+  .nav-cont {
+	  padding:0 18px 4px;
+	  border-bottom:1px dotted #d7d7d7;
+	  margin-bottom:-1px;
+  }
+  
+  .nav-cont h3 {
+	 font-size:12px;
+	 color:#555555;
+	 line-height:30px;
+  }
+  
+  .navCont-list {
+	line-height:25px;
+  }
+  
+  .navCont-list li {
+	float:left;
+	width:50%;
+
+  }
+  
+  .vertical li {width:auto;float:none;text-indent:8px;}
+  .vertical .nav-title,.nav-cont h3{font-size:14px;font-family:"微软雅黑";}
+  
+  .navCont-list li:hover {
+	text-decoration:underline;  
+  }
+  
+  
+ 
+ /* 分类页---右边产品区域*/	  
+  
+  .hr-7 {
+	  height:7px;
+	  
+	  overflow:hidden; /* 加这个有什么用呢*/	
+  }
+
+  .hr-15 {
+	  height:7px;
+	  
+	  overflow:hidden; /* 加这个有什么用呢*/	
+  } 
+  
+  .hr-25 {
+	  height:25px;
+	  
+	  overflow:hidden
+  } 
+
+  .hr-45 {
+	  height:45px;
+	  
+	  overflow:hidden
+  }
+  
+  
+  .products-title {
+	  height:34px;    /* 不加height 两个底边对不上;容易犯小错误*/	  
+	  border-bottom:2px solid #ccc;
+  }
+  
+  .products-title h3 {
+	  width:180px;
+	  height:34px;
+	  line-height:34px;
+	  text-indent:9px;
+	  border-bottom:2px solid #096dba;
+  }
+  
+ .item-cont {padding:0 15px}  /*小技巧:嵌套一个div,然后div设置padding达到隔开内容效果*/
+  
+ .item {
+	 /*  width:25%;  这个宽度已经放到上面去了*/
+	  float:left;
+ }
+
+ .img-item {
+	  height:170px;
+	  text-align:center;
+  }
+  
+  .item p {
+	  line-height:20px;
+  }
+  
+  /* .item a {color:#000;} 这里设置导致后面的字体全部都是黑色 */
+  
+  .productsText {color:#000;}
+  
+  .item a:hover {text-decoration:underline;}
+  
+  .item .price {
+	  color:#d4105a;
+	  font-weight:bold;
+	  margin-top:20px;
+  }
+  
+  .item .star {
+	  width:13px;
+	  height:12px;
+	  background:url(../images/icon/star.jpg) left top no-repeat;
+	  display:inline-block;
+	  
+	  overflow:hidden; /* 加这个有什么用呢*/	
+  }
+  
+  .pl {
+	  color:#085c9b;
+  }
+  
+
+
+  /* 筛选页面*/ 
+ 
+  .screening {border-bottom:1px solid #ccc;font-family:"Verdana";}
+  
+  .screening dt {
+	  height:32px;
+	  line-height:32px;
+	  width:74px;
+	  text-align:right;
+	  margin-right:42px;
+	  
+	  float:left;
+	  }
+  
+  .limit {
+	  line-height:32px;
+	  width:55px;
+	  float:left;
+  }
+  
+   .screening .active{   
+		background:#1d7ad9;
+		color:#fff;
+ }
+  
+  .screening a{padding:2px;}
+  
+  .screening-list{
+	    line-height:32px;
+		width:626px;
+		float:left;
+ }
+  
+  .screening-list li {
+	  width:20%;
+	  float:left;
+  }
+  
+  .screening-more {
+	  border:1px solid #ccc;
+	  height:23px;
+	  line-height:23px;
+	  margin-top:4px;
+	 
+	 float:left;
+	
+	 padding-right:8px;
+	 padding-left:10px;
+	 margin-right:10px;
+  }
+  
+  .screening-more a {
+	 background:url(../images/icon/arrow.jpg) right center no-repeat; 
+	 padding-right:15px;
+  }
+  
+  
+  
+ /* 送货区域*/ 
+  
+  .addInfo {
+	  height:31px;
+	  border:1px solid #ccc;
+	  background-color:#f5f5f5;
+  }
+  
+  .address {
+	  line-height:31px;
+	 
+	 float:left;
+ }
+  
+  .addText {
+	  padding-left:12px;
+	  padding-right:6px;
+	  
+	  float:left;
+  }
+  .address .select {
+	  margin-top:4px;
+  }
+  
+  .screen-text {
+	  line-height:31px;
+	  padding-right:80px;
+  }
+  
+  .check input,
+  .check label {vertical-align:middle;}
+  .shop-number em {
+	  color:#f00;
+	  font-style:normal;
+	  font-weight:bold;
+  }
+  
+  .screen-text span {
+	  vertical-align:middle;
+  }
+  
+  .shop-number {position:relative;top:1px;}
+  
+  .screening-list-more .item {width:33%}
+  
+  .addCar {
+	  border:1px solid #c3d5e7;
+	  height:22px;
+	  background:url(../images/icon/shopCar.jpg) 6px center no-repeat; 
+	  padding:0 6px 0 23px;
+	  display:inline-block;
+	  color:#377ac0;
+  }
+  
+
+	
+	
+	/* 送货区域 & 下拉组件*/   /* 这节课要好好学习下用到很多技巧还有定位*/ 
+ .select {
+	  border:#999 solid 1px;
+	  height:22px;
+	  line-height:22px;
+	  background-color:#fff;
+	  padding-left:10px;
+	  padding-right:20px;
+	  
+	  position:relative;
+	  
+	  float:left;
+  }
+  
+  .select h3 {
+	  font-size:12px;
+	  font-weight:normal;
+  }
+  
+  .select span {
+	  position:absolute;right:0;top:0;
+	  background:url(../images/icon/arrow.jpg) center center no-repeat;
+	  width:20px;
+	  height:22px;
+  }
+  
+  .show-select {
+	  position:absolute;left:-1px;top:22px;
+	  background:#fff;
+	  width:100%;
+	  border:#999 solid 1px;
+	  
+	  display:none;
+  }
+  
+  .show-select li {
+	  padding-left:10px
+  }
+  
+  
+  
+  
+   
+ /* 分类页码*/ 
+	.page {text-align:center;}
+  
+	.page a {
+		border:1px #ddd solid;
+		height:26px;
+		line-height:26px;
+		padding:0 12px;
+		margin-right:5px;
+		
+		display:inline-block;
+	}
+	
+	.page a:hover {
+		color:#fff;
+		background:#2266bb;
+	}
+	
+  .page .hl {padding:0 12px;display:inline-block;}
+ 
+
+ .page .txt {
+	  border:1px solid #c9c9c9;
+	  width:29px;
+	  height:22px;
+	  line-height:22px\9;
+	  padding:0 3px;
+	  text-align:center;
+  }
+  
+ .page-btn {
+	 border:1px solid #c9c9c9;
+	 background-color:#e8e8e8;
+	 width:44px;
+	 height:23px;
+	 
+ }
+  
+ .page-btn:hover {
+	color:#fff;
+	background:#2266bb;
+ }
+  
+  
+         /* IE 低版本的兼容代码*/
+  .page a,
+  .page span,
+  .page input {
+	  vertical-align:middle;
+	  position:relative;
+	  z-index:6;
+}
+
+  
+			/* 加人气图标*/
+  .screening-list-more .item {
+	  position:relative;       /* 哥哥要相对定位*/
+  }  
+  
+  .hot{
+	  height:50px;
+	  width:50px;
+	  background:url(../images/icon/hot.jpg) center center no-repeat;
+	  display:inline-block;
+	  position:absolute;top:0px;right:0px;  /* 弟弟绝对定位才能在哥哥的范围内定位*/
+  }
+  
+  
+ 
+ /* 商品介绍页面*/ 
+  .gray {
+	  background-color:#f0f0f0;
+  }
+  
+	/* 技巧：如何去除html标签换行产生的间距：方法-父元素设置font-size:0*/
+  .userPosition {
+	  font-size:0px;    /* 关键代码*/ 
+	  font-family:"黑体";
+	  
+	  margin-top:25px;
+	  margin-bottom:15px;
+  } 
+
+		 
+  .userPosition span,
+  .userPosition em,
+  .userPosition strong,
+  .userPosition a {font-size:12px;}
+  
+  .userPosition em {
+	  font-style:normal;
+  }
+  
+  .userPosition a:hover {
+	  text-decoration:underline;
+  }
+  
+  .description-info {
+	  background:#fff;
+  }
+  
+  .description {
+	  border:1px solid #cccccc;
+  } 
+
+  .description .leftArea {
+	  width:309px;
+  }
+  
+  .description .rightArea {
+	 width:688px; 
+	 border-left:1px solid #cccccc;
+  }
+  
+  .description .big {
+	  height:300px;
+	  padding:20px 0;
+	  text-align:center;
+  }
+  
+  .des-smimg {
+	/* text-align:center; 设置无效*/
+	width:265px;
+	margin:0 auto;   /* 容易忘记这个方法,同时一定要居中的元素一个宽度，否则无效*/ 
+  }
+  
+  .des-smimg li {
+	  width:52px;
+	  height:52px;
+	  
+	  float:left;
+  }
+  
+  .des-smimg img {
+	  border:1px #ccc solid;
+  }
+  
+  .des-smimg .active {
+	  border:1px #317EE7 solid;
+	  position:relative;   /* 相对定位提升下优先级,边框顺利显示出来*/
+	  /* z-index:3; */
+  }
+  
+  
+
+	/* rightArea右边区域*/
+  
+  .des-content {
+	  padding:10px;
+  }
+  
+  .des-content-tit {
+	  font:bold 16px/22px '微软雅黑';
+	  padding:12px 15px;
+  }
+  
+  .info-txt {
+	 margin-bottom:5px;
+  }
+  
+ .left-txt {
+	  width:75px;
+	  /* text-align:center; */
+	  padding-left:15px;
+	  float:left;
+	  
+	  color:#666;
+	  line-height:30px;
+  }
+  
+  
+  
+  /* IE7不兼容修改的代码*/
+ .right-txt {padding-left:75px;*padding-left:0; }
+
+  
+  
+  
+  .des-price {
+	  font-size:22px;
+	  color:#d70000;
+	  font-family:'verdana';
+	  
+  }
+  
+ 
+    .right-txt em {
+	  font-size:12px;
+	  font-style:normal;
+  }
+  
+  .hg {line-height:18px;
+	  display:inline-block;
+	 
+	  padding-top:4px;
+  }
+  
+  .des-hg{
+	   background:url(../images/icon/des-triangle.png) left center no-repeat;
+	   width:55px;
+	   height:18px;
+	   display:inline-block;
+	   color:#fff;
+	   text-indent:16px;
+	   font-style:normal;
+	   padding-right:10px;
+	   
+	   float:left;  /* IE7不兼容修改的代码,加一个做浮动解决*/
+  }
+  
+  
+  /*送货*/
+  .des-position {
+	  background-color:#f2f2f2;
+	  padding:10px 0;
+  }
+  
+  
+  .goods {
+	  line-height:24px;
+	  padding-left:10px;
+  }
+  
+  
+  .colorSelect {
+	  line-height:36px;
+  }
+  
+  
+  .des-item {
+	  color:#666;
+	  border:1px solid #ccc;
+	  padding:10px 28px;
+	  background:#fff;
+	  margin-right:10px;
+	  float:left;
+  }
+  
+ .des-item-active {
+	  border:1px solid #317ee7;position:relative;
+  }
+  
+  
+   .des-item2 {
+	  color:#666;
+	  border:1px solid #ccc;
+	  padding:9px 10px;
+	  background:#fff;
+	  margin-right:10px;
+	  margin-bottom:8px;
+	  float:left;
+  }
+  
+  
+  
+  
+  
+   /* IE7不兼容修改的代码*/
+  .ccl {width:112px} /* 不设置宽度就左浮动导致宽度拉高*/
+  
+ 
+ 
+ 
+ 
+ .des-item-active2 {
+	  border:1px solid #317ee7;position:relative;
+  }
+
+  
+  .des-style {
+	  line-height:59px;
+  }
+  
+  
+    /*数量*/
+  
+ .des-number {
+	  float:left;
+	  border:1px solid #ccc;
+	  height:32px;
+	  width:82px;
+  }
+
+  .des-number div {
+	  height:100%;
+	  float:left;
+  }
+   .add,.reduce {
+	   text-align:center;
+	   line-height:32px;
+	   width:15px;
+	   background:url(../images/icon/des-bg.jpg) left center no-repeat;
+   }
+ 
+  .add {border-right:1px solid #ccc;}
+  
+  .reduce {border-left:1px solid #ccc;}
+ 
+	/* .des-input{ */
+		/* width:50px; */
+	/* } */
+ 
+	.des-input input {
+		width:42px;
+		background-color:#fff;
+		height:32px;
+		line-height:32px;
+		padding:0 4px;
+		text-align:center;
+	}
+	
+	.condition {
+		line-height:32px;
+		padding-left:12px;
+		/*display:inline-block;  /*display和左浮动有一个就可以，不然没高度*/
+		
+		float:left;
+	}
+	
+	.condition em {
+		font-style:normal;
+		color:#fc7700;
+		font-size:14px;
+		font-weight:bold;
+	}
+	
+	
+  /*选择*/	
+  
+	.des-selectBuy {
+		padding-left:84px;
+	}
+	
+	.chosen {
+		text-indent:17px;
+		padding:22px 0 12px 0;	
+	}
+	
+	.chosen-style {
+		color:#0479ca;
+		font-weight:bold;
+		
+	}
+	
+	
+	.des-shopCar{
+		width:184px;
+		height:48px;
+		background:#f98700;
+		text-align:center;
+		margin-top:20px;
+		
+		float:left;
+	}
+	
+	.shopCarTxt {
+		line-height:48px;
+		color:#fff;
+		font-size:20px;
+		font-family:"微软雅黑";
+		font-weight:normal;
+		padding-left:15px;
+	}
+	
+	
+	.carimg {
+		background:url(../images/icon/shop-car.jpg) left top no-repeat;
+		display:inline-block;
+		width:23px;
+		height:20px;
+	}
+	
+	
+	.carimg,.shopCarTxt{vertical-align:middle;}
+	
+	.des-line {
+		width:1px;
+		height:90px;
+		background-color:#ccc;
+		margin:0 40px;
+		
+		overflow:hidden;
+		float:left;
+	}
+	
+	.careful {
+		display:inline-block;
+		padding:20px 0;
+		color:#999;
+		text-indent:17px;
+	}
+	
+
+	
+/* 左侧推荐商品*/	
+	
+	.des-info .leftArea {
+		width:188px;
+		/* border:1px solid #ccc; */ /* 自己做的时候出错了:border不能给它*/	
+		
+	}
+	
+	.recommend {
+		border:1px solid #ccc;
+		background:#fff;
+	}
+	
+	
+	.recommend-tit {
+		height:40px;
+		line-height:40px;
+		border-bottom:1px solid #ccc;
+		display:block;
+		background:#f3f3f3;
+		padding-left:15px;
+	}
+	
+	.recommend-tit2 {
+		height:40px;
+		line-height:40px;
+		border-bottom:1px solid #ccc;
+		display:block;
+		background:#f3f3f3;
+		padding-left:15px;
+	}
+	
+	
+	
+	
+	.recommend .price {margin-top:0}
+	.recommend .item {float:none;}  /* 记得清理浮动，不然出错*/
+	.recommend .img-item {height:150px}
+	
+	
+	
+	
+/* 右侧产品介绍*/		
+	.des-info .rightArea {
+		width:790px;
+	}
+	
+	.des-infoContent {
+		border:1px solid #ccc;
+		background:#fff;
+	}
+	
+	.des-tit {
+		height:39px;
+		line-height:39px;
+		border-bottom:1px solid #ccc;
+		background:#f0f0f0;
+	}
+	
+	.des-tit li {
+		float:left;
+		width:50%;
+		font:14px/39px "宋体";
+		text-align:center;
+		border-left:1px solid #ccc;
+		
+		margin-left:-1px;  /* 宽度是50%,加了1PX的边框就会掉下来，这个方法顺利解决*/
+	}
+	
+	.des-icon1 {
+		background:url(../images/icon/des-1.png) left center no-repeat;
+		padding-left:32px;
+	}
+	.des-icon2 {
+		background:url(../images/icon/des-2.png) left center no-repeat;
+		padding-left:32px;
+	
+		display:inline-block;
+	}
+	
+	
+	.des-tit .active {
+		background-color:#0479ca;
+		font-weight:bold;
+		color:#fff;
+		
+		position:relative;  /* 这句代码说是为了兼容*/
+	}
+	
+	
+	
+	.des-banner{
+		display:block;
+		margin:0 auto;
+		padding:30px 0px;
+	}
+	
+	.info-tit {
+		height:37px;
+		line-height:37px;
+		border-bottom:2px solid #ccc;
+		font-family:"微软雅黑";
+		margin-bottom:15px;
+	}
+	
+	.info-tit h3 {
+		float:left;
+		font-size:16px;
+		color:#2457a6;
+		border-bottom:2px solid #2457a6;
+		padding-right:8px;
+		
+		/* Ie7以下兼容代码*/
+		margin-bottom:-1px; position:relative;
+	}
+	
+	.info-tit h4 {
+		float:left;
+		font-size:14px;
+		color:#707070;
+		padding-left:4px;
+	}
+	
+	.info-text {
+		padding:0 20px;
+	}
+	
+	.info-text p{
+		line-height:22px;
+		font-size:14px;
+		color:#666666;
+	}
+	
+	
+
+
+/* 商品评价*/	
+	.shopDes-tit {
+		height:38px;
+		line-height:38px;
+		font-size:14px;
+		font-weight:bold;
+		padding-left:10px;
+		margin-bottom:20px;
+		
+		display:inline-block;
+	}	
+	
+	.score-box {margin-left:8px; height:120px;}
+	
+	.score {font-family:"微软雅黑";
+			margin-right:10px;
+	
+			float:left;
+	}
+	
+	.score span {
+		color:#ff8f00;
+		font-size:50px;
+	}
+	
+	.score em {
+		font-style:normal;
+		font-size:18px;
+		color:#66667d;
+	}
+	
+	.score-speed{
+		height:16px;
+		width:450px;
+		background:#bdbdbd;
+		margin-top:12px;
+		line-height:16px;
+		color:#fff;
+		
+		float:left;
+		
+		
+		position:relative;
+	}
+	
+	
+	
+	.score-speed-text {
+		height:100%;
+		
+		overflow:hidden;
+	}
+	
+	.score-speed-text li{
+		float:left;
+	}
+	
+	.speed-01 {
+		   width:114px;text-align:center;   
+	}         
+	.speed-02 {
+		   width:82px;   
+	}         
+	.speed-03 {
+		   width:76px;     
+	}         
+	.speed-04 {
+		   width:65px;     
+	}         
+	
+	
+	
+	.score-num {
+		position:absolute;left:94%;top:-25px;
+		text-align:center;
+		width:25px;
+		height:14px;
+		background:#7f7f7f;
+	 } 
+	
+	
+		/* 用border制作三角形  老师做的 */
+	.score-num i {
+		border-width:8px;border-style:solid dashed dashed dashed;
+		border-color:#7f7f7f transparent transparent transparent;
+		width:0;
+		height:0;
+	}
+	
+	/* .score-num i {   /* 自己做的 */ 
+		/* width:0; */
+		/* height:0; */
+		/* border-top:8px solid #7f7f7f; */
+		/* border-right:8px dashed transparent; */
+		/* border-bottom:8px dashed  transparent; */
+		/* border-left:8px dashed transparent; */
+		
+		/* position:relative;left:0;top:2px;/* 自己加的,相对自己定位下移动2Px,不会遮盖4.7 */  */
+	/* } */
+	
+	
+	
+	 .total { 
+		 color:#000;
+		 padding-top:12px;
+		 
+	 } 
+	
+	
+	
+	
+/* 评价区域 */	
+	.review-tab {
+		height:30px;
+		background:#f2f2f2;
+	}
+	
+	.review {
+		line-height:30px;
+		margin-left:20px;
+		
+		height:100%; /* 搞不懂,最好写上高度吧 */	
+	}
+	
+	.review li {
+		float:left;
+		margin-right:40px;
+		
+		height:100%;/* 搞不懂,最好写上高度吧 */   
+	}
+	
+	.review li a {
+		display:inline-block;
+		padding:0 5px;
+		
+		height:28px; 
+	}
+	
+	
+	.review .active {
+		color:#317de6;
+		font-weight:bold;
+		border-bottom:2px solid #317de6;
+		
+		/* 针对IE6兼容的代码 */ 
+		margin-bottom:-2px;position:relative;
+	}
+	
+	.review-sort {
+		float:right;
+		padding:1px 5px 0 0;
+	}
+	
+	.review-sort a{
+		display:inline-block;
+		line-height:20px;
+		height:20px;
+		border:solid 1px #ccc;
+		padding:0 20px 0 6px;
+		
+		background:url(../images/icon/down.png) 58px center no-repeat;
+		
+	}
+	
+	
+	.mark img {
+		display:block;
+	}
+	
+	
+	
+	
+	
+/* 注册与登录页 */   
+	
+	.comWidth {
+		width:460px;
+		margin:0 auto;
+	}
+	
+	
+	
+	
+	.welc {
+		font-family:"微软雅黑";
+		font-size:22px;
+		color:#fff;
+		line-height:85px;
+		margin-left:24px;
+		font-weight:normal;
+	}	
+	
+	
+	
+	
+	.logi-logo .logo {
+		padding-left:60px;
+	}
+	
+	
+	.login-box {
+		border:1px solid #ccc;
+		margin-top:10px;
+		
+		position:relative;
+	}
+	
+	.login-cont {
+		padding:15px 78px;
+	}
+	
+	.l-tit {color:#666;line-height:20px;}
+	
+	
+	.login-bg{
+		background:url(../images/btn-bg.jpg) left top repeat-x;
+		font-size:16px;
+		font-family:"微软雅黑";
+		font-weight:bold;
+		letter-spacing:5px;
+		color:#606060;
+	}
+	
+	
+	
+	
+	.login-input {
+		border:1px #999 solid;
+		height:32px;
+		width:100%;
+		text-indent:5px;
+		
+		
+		
+		line-height:32px\9;  /* 兼容 */ 
+	}
+	
+	
+	
+	.login-icon1 {background:url();
+	}
+	.login-icon2 {background:url();
+	}
+	
+	
+	.mbot-10 {margin-bottom:10px;}
+	
+	.autoLogin {
+		padding:20px 0;
+		float:left;
+		
+		margin-bottom:15px;
+	}
+	
+	.jl {margin-right:15px}
+	
+	.forget {padding:22px 0;}
+	
+	.check {
+		position:relative;top:3px; /*  这个方法好 让图标和文字对齐用relative */ 
+		margin-right:5px;
+	}
+	
+	.login-btn {
+		width:309px;
+		height:36px;
+		border:1px #999 solid;
+	}
+	
+	
+	
+	
+	.partner {padding-top:34px}
+	
+	.login-list li {float:left;line-height:20px}
+	
+	.partner span {color:#ccc; padding:0 3px}
+	
+	.free-login {
+		background:#7cbe56;
+		width:115px;
+		height:30px;
+		line-height:30px;
+		text-align:center;
+		
+		/* position:absolute;left:300px;top:340px; */
+		position:absolute;right:30px;bottom:-30px;  /* 为什么不是bottom:30px ？ */
+	}
+	
+	.free-login a {
+		color:#fff;
+	}
+	
+	
+	
+
+	
+/* 注册页*/	
+	.reg-logo .comWidth {width:630px;}
+
+	.reg-box {
+		width:628px;
+		margin:0 auto;
+		border:1px solid #ccc;
+		margin-top:15px;
+	}
+	
+	.reg-cont {
+		padding:30px 78px;
+	}
+	
+	.reg-item {
+		line-height:37px;
+		width:109px;
+		text-align:right;
+		
+		float:left;
+	}
+
+	/* .reg-item { */
+		/* font:14px/34px "宋体"; */
+		/* width:109px; */
+		/* text-align:right; */
+		
+		/* float:left; */
+	/* } */
+	
+	.reg i {
+		color:red;
+		padding-right:5px;
+		font-style:normal;
+	}
+	
+	
+		
+	.reg-input {
+		border:1px #999 solid;
+		height:32px;
+		width:310px;
+		text-indent:5px;
+		
+		
+		
+		line-height:32px\9;  /* 兼容 */ 
+	}
+	
+	
+	
+	.input-item {
+		width:270px;
+		float:left;
+	}
+	
+	
+	.ll {margin-bottom:30px;}
+	
+	.autoLogin2 {
+		
+		
+		margin-bottom:15px;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

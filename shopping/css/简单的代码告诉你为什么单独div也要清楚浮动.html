@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='zh-cn'>
+<meta charset='UTF-8'>
+<head>
+<title>清除浮动</title>
+
+<style>
+	.public {width:600px;;margin:0 auto}
+	.div1 {border:1px green solid;}
+	/*.div0 {clear:both} */             /* 务必要添加这个空div,不然clear:both;是无效的 */
+	
+	.div2 {width:350px;height:200px;background:orange;float:right;}    /* 如果这里不加float:right,div2就会撑开div,且文字在div2下面,
+																		  加了浮动;div1就没有高度了,div2脱离文本流动,文字就会受到浮动影响，靠左边顶部  */
+</style>
+</head>
+
+<body>
+ 
+ <div class='div1 public'>
+   <div class='div2 '>我是div2</div>
+   <div class='div0'></div>
+</div>
+<div>123456789囧你哦啊哦哦啊个</div>
+
+
+</body>
+
+</html>
