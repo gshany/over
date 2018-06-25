@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>全选反选匹配选复选框</title>
+     <style type="text/css">
+        * {
+                padding: 0;
+                margin: 0;
+            }
+            
+            .wrap {
+                width: 300px;
+                margin: 100px auto 0;
+            }
+            
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+                border: 1px solid #c0c0c0;
+                width: 300px;
+            }
+            
+            th,
+            td {
+                border: 1px solid #d0d0d0;
+                color: #404060;
+                padding: 10px;
+            }
+            
+            th {
+                background-color:rgb(51, 199, 18);
+                font: bold 16px "微软雅黑";
+                color: #fff;
+            }
+            
+            td {
+                font: 14px "微软雅黑";
+            }
+            
+            tbody tr {
+                background-color: #f0f0f0;
+            }
+            
+            tbody tr:hover {
+                cursor: pointer;
+                background-color: #fafafa;
+            }    </style>
+</head>
+<body>
+<div class="wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" id="theadInp" />
+                        </th>
+                        <th>学号</th>
+                        <th>姓名</th>
+                        <th>电话</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <tr>
+                        <td>
+                            <input type="checkbox" />
+                        </td>
+                        <td>001</td>
+                        <td>李小明</td>
+                        <td>186*****897
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" />
+                        </td>
+                        <td>002</td>
+                        <td>张二小</td>
+                        <td>186*****897
+                    </tr>
+                      <tr>
+                        <td>
+                            <input type="checkbox" />
+                        </td>
+                        <td>003</td>
+                        <td>李三姐</td>
+                        <td>186*****897
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+   $(function() {
+                //实现全选反选
+                //$(this).prop('checked')this谁调用指的是谁这里指的是#theadInp,当我们选中它时，checked==true,取消的时候checked==false，从而达到全选反选的目的
+                //prop() 和 attr() 返回不同的值。返回复选框的 "checked" 状态时不同:attr('checked'): 返回的是：checked ;  prop('checked'): 返回的是：true
+
+
+                $("#theadInp").on('click', function() {
+                    $("tbody input:checkbox").attr("checked", $(this).prop('checked'));//选择所有checkebox,设置所有checkebox 的 checked值为 $(this).prop('checked')：
+                })
+
+                $("tbody input:checkbox").on('click', function() {
+                    //当选中的长度等于checkbox的长度的时候,就让控制全选反选的checkbox设置为选中,否则就为未选中
+                    if($("tbody input:checkbox").length === $("tbody input:checked").length) {
+                        $("#theadInp").prop("checked", true);
+                    } else {
+                        $("#theadInp").prop("checked", false);
+                    }
+                })
+            })
+</script>
+</body>
+</html>
