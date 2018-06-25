@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>菜谱</title>
  
 	<style>
@@ -81,10 +80,91 @@ em, i {
     font-style: normal;
 }
 	</style>
-    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script>
 		$(function(){
-			$('#btnSearch').click(function(){
+			
+
+			$('#btnSearch').click(function(e){
+
+			    var menu = $('#menu')
+			    menu = menu.text('正在查询结果...')
+				var txt = $('#txtSearch').val()
+				txt1 = encodeURIComponent(txt)
+				
+				$.ajax({
+					type:'get',
+					dataType:'jsonp',
+					url:'http://apis.juhe.cn/cook/query?key=60b9689582560d24c19ff20a47a3c8fa&pn=3&rn=10&menu=' +txt1,
+					success:function(data){
+					     menu.text('')
+						if(data.resultcode!=200){
+							menu.text('没有相关信息')
+							return;
+						}
+						
+						for(var i=0;i<data.result.data.length;i++){
+							var mydata = data.result.data[i]
+							var div1 = $('<div class="all"></div>')
+							menu.append(div1)
+							
+							var title = $('<h2>'+mydata.title+'</h2>')
+							div1.append(title)
+							
+							var tags = $('<p>'+mydata.tags+'</p>')
+							div1.append(tags)
+							
+							var imtro = $('<p>'+mydata.imtro+'</p>')
+							div1.append(imtro)
+							
+							var ingredients = $('<p>'+mydata.ingredients+'</p>')
+							div1.append(ingredients)
+							
+							var burden = $('<p>'+mydata.burden+'</p>')
+							div1.append(burden)
+							
+							for(var j=0;j<mydata.albums.length;j++){
+								var img = $(" <img src=' "+mydata.albums[j]+" '> ")
+								div1.append(img)
+							}
+						
+							var steps = $('<div></div>')
+							div1.append(steps)
+						    
+							for(var k=0;k<mydata.steps.length;k++){
+								var step = mydata.steps[k]
+								
+								var c = $('<div></div>')
+								steps.append(c)
+								
+								var p2=$('<p>' +step.step+ '</p>')
+								c.append(p2)
+								
+								var p1=$('<p><img src = " '+ step.img +' "></p>')
+								c.append(p1)
+								
+								
+							}
+						     
+						menu.append('<hr>')
+						}	
+
+						
+					},
+					error:function(e){
+					    menu.text('出错')
+				}
+				})
+				
+			})
+		
+
+		//键盘enter事件提交
+			$('#txtSearch').keydown(function(e){      //注意这里是txtSearch 不是 btnSearch
+
+				if(e.which==13){
+
 			    var menu = $('#menu')
 			    menu = menu.text('正在查询结果...')
 				var txt = $('#txtSearch').val()
@@ -154,7 +234,11 @@ em, i {
 					}
 				
 				})
+				}
 			})
+
+
+
 		})
 	</script>
    
