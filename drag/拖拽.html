@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽</title>
+    <style>
+        body,dl ,dd ,h1 ,h2 ,h3, h4,h5 ,h6 ,p, ol, ul, form{margin:0;padding:0;}
+        #contain{
+            width:800px;
+            height:400px;
+            background:#5CACEE;
+            margin:100px auto;
+            position: relative;
+        }
+      
+        #image1{
+           width: 150px;
+           height:150px;
+            background: rgb(100,100,200);
+            cursor: move;
+           
+
+            position: absolute;
+            background: url('pic1.jpg')
+        }
+      
+    </style>
+</head>
+<body>
+<div id='contain'>
+    
+    <div id='image1'></div>
+
+</div>
+    
+    
+    <script>
+        var div1 = document.getElementById('contain')
+        var img = document.getElementById('image1')
+
+        //计算鼠标按下时候的 x y
+        img.onmousedown = function(e){
+            var e = e||window.event
+            var x = e.clientX - img.offsetLeft
+            var y = e.clientY - img.offsetTop
+
+        document.onmousemove = function(e){
+          
+            var e = e||window.event
+            var l = e.clientX - x      //e.clientX - x -100,不用减去100，因为它是相对于大div定位的
+            var t = e.clientY - y
+            
+        //判断四个边角范围
+              if(l<0){
+                 l = 0;
+            }else if(l>div1.offsetWidth-img.offsetWidth){
+                 l = div1.offsetWidth-img.offsetWidth 
+            }
+              
+
+               if(t<0){
+                 t  = 0;
+            }else if(t>div1.offsetHeight-img.offsetHeight){
+                 t= div1.offsetHeight-img.offsetHeight
+            }
+
+            img.style.left = l+'px'
+            img.style.top = t+'px'
+          
+        }
+
+         document.onmouseup = function(){ 
+            document.onmousemove =null
+            document.onmousedown  = null
+        }
+
+
+    }
+      
+    </script>
+</body>
+</html>
