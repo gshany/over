@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>提交评论</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+		#contain{width: 300px;height: auto;margin:100px auto;}
+		#txt1,textarea{width: 200px;}
+		#txt1,#btn1{ margin-bottom: 2px}
+	</style>
+</head>
+<body>
+	<div id='contain'>
+		<input type="text" id="txt1" placeholder='请输入评论'><br>
+		<input id="btn1" type="button" value="提交"><br>
+		<textarea id="txt2" rows="10" cols="30"></textarea><br>
+	</div>
+	<script type="text/javascript">
+		$(function(){			
+			$('#btn1').click(function(){
+				var str1=$('#txt1').val();
+		    	var str2=$('#txt2').val() 
+		    	str2+=str1+'\n'
+				$('#txt2').val(str2);
+				$('#txt1').val('')
+			})
+			
+			$('#txt1').keydown(function(e){
+				if(e.which==13){
+					var str1=$('#txt1').val();
+			    	var str2=$('#txt2').val() 
+			    	str2+=str1+'\n'
+					$('#txt2').val(str2);
+					$('#txt1').val('')
+				}
+			})
+			
+		})
+	</script>
+</body>
+</html>

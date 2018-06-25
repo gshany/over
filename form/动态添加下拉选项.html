@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态添加下拉选项</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        #contain{
+            width: 200px;
+            height: 800px;
+            margin:100px  auto;
+        }
+    </style>
+</head>
+<body>
+<div id='contain'>
+    
+     <input type="text" id='txt'>
+    <a href="#" id='add'>添加</a></body><br><br>
+    <select name="" id="select">
+        <option value="">HTML</option>
+        <option value="">CSS</option>
+        <option value="">JavaScript</option>
+        <option value="">Angular</option>
+    </select>
+     <a href="#" id='del'>删除</a></body>
+
+</div>
+   
+<script>
+    var txt = document.getElementById('txt')
+    var add = document.getElementById('add')
+    var select = document.getElementById('select')
+    var del = document.getElementById('del')
+    
+    add.onclick = function(){
+        if(txt.value){                //判断输入框是否为空
+            var txt1 = txt.value
+         var co = document.createElement('option')
+             co.innerHTML=txt1       //创建option并且追加到下面select
+         select.appendChild(co)
+         txt.value=''
+        }else{
+            alert('输入的内容不能为空')
+        }
+         
+        }
+
+    del.onclick = function(){
+         var i = select.selectedIndex;   //获取select里面的下标索引
+            select.options.remove(i);    
+        }
+
+
+        
+
+</script>
+
+</body>
+</html>
