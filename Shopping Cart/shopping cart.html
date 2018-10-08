@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+        <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <title>vue 开发完整购物车</title>
+    <style>
+      #input1{width: 50px}
+    </style>
+</head>
+<body>
+<div id="App">
+ 
+  <template v-if='products.length == 0'>
+      购物车为空
+  </template>
+  <template v-else>
+      <table>
+          <tr>
+            <th><input type="checkbox" v-model="selectAll" @click="allCheck"></th>
+            <th>商品名称</th>
+            <th>商品价格</th>
+            <th>商品数量</th>
+            <th>操作</th>
+          </tr>
+        
+          <tr v-for="(item,k) in products">
+            <td><input type="checkbox" :checked="selectAllDate.indexOf(item.id) != -1" @click="Iselect(item.id)"></td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+        
+            <td>
+              
+              <el-button plain  @click="add(k)">+</el-button>
+              <el-autocomplete  v-model="item.num" id='input1' ></el-autocomplete>
+              <el-button plain  @click="ajj(k)">-</el-button>
+            </td>
+            <td>
+              
+              <el-button type="primary" icon="el-icon-delete" size="small" @click="del(k)"></el-button>
+            </td> 
+          </tr>
+
+      </table>
+  </template>
+    <div> 总计：{{total}}元</div>
+
+</div>
+
+
+   
+
+<script>
+
+var ss = new Vue({
+  'el': '#App',
+  data: {
+   
+     products:[
+       {id:1,name:"iphoneXS",num:0,price:100},
+       {id:2,name:"Huawei20",num:0,price:80},
+       {id:3,name:"xiaomi8",num:0,price:50}       
+    ],
+    selectAll:false,
+    selectAllDate:[],
+
+   
+  },
+    
+
+  
+  methods: {
+    allCheck(e){
+        e = e||event
+        //alert(e.currentTarget.checked)  //true false
+        if(e.currentTarget.checked){
+            this.products.forEach((v)=>{
+                this.selectAllDate.push(v.id)
+            })
+            
+        }else{
+            this.selectAllDate=[]
+        }
+        // debugger
+    },
+
+    //每个checkebox元素
+    Iselect(id){
+
+          var res = this.selectAllDate.indexOf(id);
+          res == -1 ? this.selectAllDate.push(id) : this.selectAllDate.splice(res,1)  //注意第一个是id,第二个res
+            
+         this.selectAll = this.selectAllDate.length == this.products.length ? true : false
+    },
+    
+    
+    
+    add(k){
+        this.products[k].num++   
+       
+      },
+    
+   ajj(k){
+       this.products[k].num--
+       if( this.products[k].num<=0){
+         this.products.splice(k,1)    
+       }
+    },
+    
+  del(k){
+    this.products.splice(k,1)
+  }, 
+    
+    check(){
+        if(this.checked == this.products.length){
+            this.checked = true
+        }else{
+            this.checked = false
+        }
+    },
+
+
+    
+ },
+  
+      
+   computed:{
+      total(){                                
+          var total=0                         
+
+              this.products.forEach((v,k)=>{
+                if(this.selectAllDate.indexOf(v.id)!=-1){
+                    total += v.num*v.price
+                }
+           }) 
+              
+     return total
+    }, 
+  }
+
+
+});
+    </script>
+</body>
+</html>
